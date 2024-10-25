@@ -1,9 +1,6 @@
 package ua.hillel.lessons.lesson16.demo_03;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.*;
 
 public class Main {
@@ -78,6 +75,38 @@ public class Main {
 //        System.out.println(biFunction.apply("orange", 2));
 //        System.out.println(biFunction.apply("potato", 3));
 //        System.out.println(biFunction.apply("banana", 4));
+
+//        Predicate<Integer> predicate1 = num -> num % 2 == 0;
+//        Predicate<Integer> predicate2 = predicate1.and(num -> num > 10);
+//        Predicate<Integer> predicate3 = predicate1.or(num -> num > 10);
+//        Predicate<Integer> predicate4 = predicate1.negate();
+
+//        System.out.println(predicate1.test(10));
+//        System.out.println(predicate1.test(11));
+
+//        System.out.println(predicate3.test(10));
+//        System.out.println(predicate3.test(13));
+
+//        System.out.println(predicate4.test(11));
+//
+//
+//        List<Integer> list = new ArrayList<>();
+//        list.add(1);
+//        list.add(2);
+//        list.add(3);
+//        list.add(4);
+//
+//        System.out.println("BEFORE: " + list);
+//        list.removeIf(num -> num % 2 == 0);
+//        System.out.println("AFTER: " + list);
+
+//        UnaryOperator<Integer> unaryOperator = num -> num * num;
+//        System.out.println(unaryOperator.apply(5));
+//
+////        BinaryOperator<Integer> binaryOperator = Integer::sum;
+//        BinaryOperator<Integer> binaryOperator = (a, b) -> Integer.sum(a, b);
+//        System.out.println(binaryOperator.apply(5, 10));
+
 
 
     }
