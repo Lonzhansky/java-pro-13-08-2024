@@ -70,7 +70,6 @@ public class Main3 {
         List<Student> students = data.stream()
                 .collect(new PersonToStudentCollector());
 
-        // Виводимо результат
         students.forEach(System.out::println);
 
 
