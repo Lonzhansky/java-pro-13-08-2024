@@ -1,0 +1,26 @@
+@startuml
+class demos._04_decorator.DeviceBasic {
++ void start()
++ int getMagnificationPower()
++ void stop()
+}
+class demos._04_decorator.DeviceEquipped {
+- Device equipped
++ void start()
++ int getMagnificationPower()
++ void stop()
+}
+class demos._04_decorator.App {
+~ {static} int magnPwr
++ {static} void main(String[])
+}
+interface demos._04_decorator.Device {
+~ void start()
+~ int getMagnificationPower()
+~ void stop()
+}
+
+
+demos._04_decorator.Device <|.. demos._04_decorator.DeviceBasic
+demos._04_decorator.Device <|.. demos._04_decorator.DeviceEquipped
+@enduml

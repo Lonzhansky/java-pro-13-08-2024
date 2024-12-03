@@ -1,0 +1,25 @@
+@startuml
+interface demos._07_proxy.IBoat {
+~ void enter(Person)
+}
+class demos._07_proxy.App {
++ {static} void main(String[])
+}
+class demos._07_proxy.BoatReal {
++ void enter(Person)
+}
+class demos._07_proxy.Person {
+- String name
++ String toString()
+}
+class demos._07_proxy.BoatRealProxy {
+- {static} int PERSONS_ALLOWED_NUM
+- int personsNum
+- IBoat iBoat
++ void enter(Person)
+}
+
+
+demos._07_proxy.IBoat <|.. demos._07_proxy.BoatReal
+demos._07_proxy.IBoat <|.. demos._07_proxy.BoatRealProxy
+@enduml

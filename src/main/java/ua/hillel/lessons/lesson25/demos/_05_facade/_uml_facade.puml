@@ -1,0 +1,46 @@
+@startuml
+class demos._05_facade.WorkerA {
++ void work()
++ String name()
+}
+enum demos._05_facade.Action {
++  WAKE_UP
++  GO_TO_PLANT
++  WORK
++  GO_HOME
++  GO_TO_SLEEP
+}
+class demos._05_facade.PlantFacade {
+- List<PlantWorker> workers
++ void startDay()
++ void makeProduct()
++ void endDay()
+- {static} void makeActions(Collection<PlantWorker>,Action)
+}
+class demos._05_facade.App {
++ {static} void main(String[])
+}
+class demos._05_facade.WorkerB {
++ void work()
++ String name()
+}
+abstract class demos._05_facade.PlantWorker {
++ void wakeUp()
++ void goToPlant()
++ {abstract}void work()
++ void goHome()
++ void goToSleep()
+- void action(Action)
++ void action(Action)
++ {abstract}String name()
+}
+class demos._05_facade.WorkerC {
++ void work()
++ String name()
+}
+
+
+demos._05_facade.PlantWorker <|-- demos._05_facade.WorkerA
+demos._05_facade.PlantWorker <|-- demos._05_facade.WorkerB
+demos._05_facade.PlantWorker <|-- demos._05_facade.WorkerC
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+class demos._01_adapter.DetailB {
+~ void workB()
+}
+class demos._01_adapter.Machine {
+- DetailA detailA
+~ void workA()
+}
+interface demos._01_adapter.DetailA {
+~ void workA()
+}
+class demos._01_adapter.DetailBAdapter {
+- DetailB detailB
++ void workA()
+}
+class demos._01_adapter.Main {
++ {static} void main(String[])
+}
+
+
+demos._01_adapter.DetailA <|.. demos._01_adapter.DetailBAdapter
+@enduml

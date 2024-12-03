@@ -1,0 +1,43 @@
+@startuml
+interface demos._02_bridge.Option {
+~ void onActivate()
+~ void apply()
+~ void onDeactivate()
+}
+class demos._02_bridge.OptionA {
++ void onActivate()
++ void apply()
++ void onDeactivate()
+}
+class demos._02_bridge.App {
++ {static} void main(String[])
+}
+class demos._02_bridge.OptionB {
++ void onActivate()
++ void apply()
++ void onDeactivate()
+}
+class demos._02_bridge.DeviceA {
+- Option option
++ void start()
++ void operate()
++ void stop()
+}
+interface demos._02_bridge.Device {
+~ void start()
+~ void operate()
+~ void stop()
+}
+class demos._02_bridge.DeviceB {
+- Option option
++ void start()
++ void operate()
++ void stop()
+}
+
+
+demos._02_bridge.Option <|.. demos._02_bridge.OptionA
+demos._02_bridge.Option <|.. demos._02_bridge.OptionB
+demos._02_bridge.Device <|.. demos._02_bridge.DeviceA
+demos._02_bridge.Device <|.. demos._02_bridge.DeviceB
+@enduml

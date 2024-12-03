@@ -1,0 +1,31 @@
+@startuml
+class demos._03_composite.Sentence {
+# void printThisAfter()
+}
+class demos._03_composite.App {
++ {static} void main(String[])
+}
+class demos._03_composite.Letter {
+- char character
+# void printThisBefore()
+}
+class demos._03_composite.Word {
+# void printThisBefore()
+}
+class demos._03_composite.Messenger {
+~ LetterComposite messageFromUserA()
+~ LetterComposite messageFromUserB()
+}
+abstract class demos._03_composite.LetterComposite {
+- List<LetterComposite> part
++ void add(LetterComposite)
+# void printThisBefore()
+# void printThisAfter()
++ void print()
+}
+
+
+demos._03_composite.LetterComposite <|-- demos._03_composite.Sentence
+demos._03_composite.LetterComposite <|-- demos._03_composite.Letter
+demos._03_composite.LetterComposite <|-- demos._03_composite.Word
+@enduml

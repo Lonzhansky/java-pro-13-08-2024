@@ -1,0 +1,48 @@
+@startuml
+interface demos._06_flyweight.Medicine {
+~ void drink()
+}
+class demos._06_flyweight.BetaMedicine {
++ void drink()
+}
+class demos._06_flyweight.MedicineFactory {
+- Map<MedicineType,Medicine> medicines
+~ Medicine createMedicine(MedicineType)
+}
+class demos._06_flyweight.EpsilonMedicine {
++ void drink()
+}
+class demos._06_flyweight.DeltaMedicine {
++ void drink()
+}
+class demos._06_flyweight.GammaMedicine {
++ void drink()
+}
+class demos._06_flyweight.AlphaMedicine {
++ void drink()
+}
+enum demos._06_flyweight.MedicineType {
++  ALPHA
++  BETA
++  GAMMA
++  DELTA
++  EPSILON
+}
+class demos._06_flyweight.Pharmacy {
+- List<Medicine> topShelf
+- List<Medicine> bottomShelf
++ List<Medicine> getTopShelf()
++ List<Medicine> getBottomShelf()
++ void drinkAllMedicines()
+}
+class demos._06_flyweight.App {
++ {static} void main(String[])
+}
+
+
+demos._06_flyweight.Medicine <|.. demos._06_flyweight.BetaMedicine
+demos._06_flyweight.Medicine <|.. demos._06_flyweight.EpsilonMedicine
+demos._06_flyweight.Medicine <|.. demos._06_flyweight.DeltaMedicine
+demos._06_flyweight.Medicine <|.. demos._06_flyweight.GammaMedicine
+demos._06_flyweight.Medicine <|.. demos._06_flyweight.AlphaMedicine
+@enduml

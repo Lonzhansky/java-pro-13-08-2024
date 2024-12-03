@@ -6,6 +6,7 @@ out/
 .idea
 *.iml
 out
+/target
 
 
 ### Eclipse ###
