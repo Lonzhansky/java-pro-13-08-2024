@@ -1,0 +1,23 @@
+@startuml
+class demos._4_low_coupling.good.Car {
++ void move()
+}
+class demos._4_low_coupling.good.Bike {
++ void move()
+}
+class demos._4_low_coupling.good.Traveler {
+- Vehicle vehicle
++ void setVehicle(Vehicle)
++ void startJourney()
+}
+class demos._4_low_coupling.good.App {
++ {static} void main(String[])
+}
+interface demos._4_low_coupling.good.Vehicle {
+~ void move()
+}
+
+
+demos._4_low_coupling.good.Vehicle <|.. demos._4_low_coupling.good.Car
+demos._4_low_coupling.good.Vehicle <|.. demos._4_low_coupling.good.Bike
+@enduml

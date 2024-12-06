@@ -1,0 +1,35 @@
+@startuml
+interface demos._7_pure_fabrication.ProductDao {
+~ void createProduct(Product)
+~ List<Product> getAllProducts()
+~ void updateProduct(Product)
+~ void deleteProduct(Product)
+}
+class demos._7_pure_fabrication.App {
+~ {static} ProductDao productDao
+~ {static} Product product
++ {static} void main(String[])
+~ {static} void createProducts()
+~ {static} void readProducts()
+~ {static} void updateProduct(Product)
+~ {static} void deleteProduct(Product)
+}
+class demos._7_pure_fabrication.Product {
+- String name
+- int id
++ String getName()
++ void setName(String)
++ int getId()
++ void setId(int)
+}
+class demos._7_pure_fabrication.ProductDaoImpl {
+~ List<Product> products
++ void createProduct(Product)
++ List<Product> getAllProducts()
++ void updateProduct(Product)
++ void deleteProduct(Product)
+}
+
+
+demos._7_pure_fabrication.ProductDao <|.. demos._7_pure_fabrication.ProductDaoImpl
+@enduml

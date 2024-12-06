@@ -1,0 +1,39 @@
+@startuml
+class demos._3_controller.ProductController {
+- ProductView view
+- ProductModel model
++ void runApp()
+}
+
+
+class demos._3_controller.ProductModel {
++ double calcCost(int,double)
+}
+
+class demos._3_controller.App {
++ {static} void main(String[])
+}
+
+class demos._3_controller.ProductView {
++ Product getData()
++ void getOutput(String)
+}
+
+class demos._3_controller.Product {
+- String name
+- int quota
+- double price
++ String getName()
++ void setName(String)
++ int getQuota()
++ void setQuota(int)
++ double getPrice()
++ void setPrice(double)
+}
+
+
+class demos._3_controller.AppStarter {
++ void startApp()
+}
+
+@enduml

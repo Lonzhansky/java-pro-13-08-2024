@@ -1,0 +1,19 @@
+@startuml
+class demos._2_open_closed.bad.Product {
+- String name
+- String type
+- double price
++ String getName()
++ void setName(String)
++ String getType()
++ void setType(String)
++ double getPrice()
++ void setPrice(double)
+}
+class demos._2_open_closed.bad.App {
+~ {static} List<Product> products
++ {static} void main(String[])
++ {static} List<Product> getProducts()
++ {static} double calculateTotalOrder(List<Product>)
+}
+@enduml

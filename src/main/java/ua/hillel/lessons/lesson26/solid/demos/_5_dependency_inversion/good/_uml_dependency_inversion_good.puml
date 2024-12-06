@@ -1,0 +1,19 @@
+@startuml
+class demos._5_dependency_inversion.good.OfficePrinter {
+- Printer printer
++ void printFile()
+}
+class demos._5_dependency_inversion.good.App {
+~ {static} Printer printer
++ {static} void main(String[])
+}
+class demos._5_dependency_inversion.good.LaserPrinter {
++ void print(String)
+}
+interface demos._5_dependency_inversion.good.Printer {
+~ void print(String)
+}
+
+
+demos._5_dependency_inversion.good.Printer <|.. demos._5_dependency_inversion.good.LaserPrinter
+@enduml

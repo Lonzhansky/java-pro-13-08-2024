@@ -1,0 +1,24 @@
+@startuml
+class demos._1_information_expert.good.Client {
+~ {static} String address
++ {static} void main(String[])
+}
+class demos._1_information_expert.good.Product {
+- String name
+- double price
++ String getName()
++ double getPrice()
+}
+class demos._1_information_expert.good.Order {
+- List<OrderItem> orderItems
+- String address
++ List<OrderItem> getOrderItems()
++ String getAddress()
++ double getOrderCost()
+}
+class demos._1_information_expert.good.OrderItem {
+- Product product
+- int quantity
++ double getPrice()
+}
+@enduml

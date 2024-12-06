@@ -1,0 +1,19 @@
+@startuml
+class demos._3_liskov_substitution.bad.Rectangle {
+- double width
+- double height
++ void setWidth(double)
++ void setHeight(double)
++ double area()
+}
+class demos._3_liskov_substitution.bad.App {
++ {static} void main(String[])
+}
+class demos._3_liskov_substitution.bad.Square {
++ void setHeight(double)
++ void setWidth(double)
+}
+
+
+demos._3_liskov_substitution.bad.Rectangle <|-- demos._3_liskov_substitution.bad.Square
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+class demos._4_low_coupling.bad.Traveler {
+~ Car car
++ void startJourney()
+}
+class demos._4_low_coupling.bad.Car {
++ void move()
+}
+class demos._4_low_coupling.bad.App {
++ {static} void main(String[])
+}
+@enduml

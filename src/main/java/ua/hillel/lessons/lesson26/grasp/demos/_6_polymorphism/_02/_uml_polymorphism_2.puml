@@ -1,0 +1,22 @@
+@startuml
+class demos._6_polymorphism.v02.Cat {
++ void speak()
+}
+class demos._6_polymorphism.v02.Racoon {
++ void speak()
+}
+class demos._6_polymorphism.v02.Animal {
++ void speak()
+}
+class demos._6_polymorphism.v02.Main {
++ {static} void main(String[])
+}
+class demos._6_polymorphism.v02.Dog {
++ void speak()
+}
+
+
+demos._6_polymorphism.v02.Animal <|-- demos._6_polymorphism.v02.Cat
+demos._6_polymorphism.v02.Animal <|-- demos._6_polymorphism.v02.Racoon
+demos._6_polymorphism.v02.Animal <|-- demos._6_polymorphism.v02.Dog
+@enduml

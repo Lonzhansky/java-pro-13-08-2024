@@ -1,0 +1,39 @@
+@startuml
+class demos._1_single_responsibility.Order {
+- Customer customer
+- String orderId
+- String itemName
+- int quantity
+- int totalBillAmt
++ Customer getCustomer()
++ void setCustomer(Customer)
++ String getOrderId()
++ void setOrderId(String)
++ String getItemName()
++ void setItemName(String)
++ int getQuantity()
++ void setQuantity(int)
++ int getTotalBillAmt()
++ void setTotalBillAmt(int)
++ void prepareOrder()
+}
+class demos._1_single_responsibility.BillCalculation {
+- Order order
++ void calculateBill()
+}
+class demos._1_single_responsibility.Delivery {
+- Order order
++ void delivery()
+}
+class demos._1_single_responsibility.App {
++ {static} void main(String[])
+}
+class demos._1_single_responsibility.Customer {
+- String name
+- String address
++ String getName()
++ void setName(String)
++ String getAddress()
++ void setAddress(String)
+}
+@enduml

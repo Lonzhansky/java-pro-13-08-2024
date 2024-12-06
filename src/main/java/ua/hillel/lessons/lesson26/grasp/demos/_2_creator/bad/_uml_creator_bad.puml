@@ -1,0 +1,25 @@
+@startuml
+class demos._2_creator.bad.Product {
+- String name
+- double price
++ String getName()
++ void setName(String)
++ double getPrice()
++ void setPrice(int)
+}
+class demos._2_creator.bad.Client {
+~ {static} String address
++ {static} void main(String[])
+}
+class demos._2_creator.bad.Order {
+- List<OrderItem> orderItems
+- String address
++ String getAddress()
++ double getOrderCost()
+}
+class demos._2_creator.bad.OrderItem {
+- Product product
+- int quantity
++ double getPrice()
+}
+@enduml

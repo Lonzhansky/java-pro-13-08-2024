@@ -1,0 +1,30 @@
+@startuml
+class demos._4_interface_segregation.good.App {
++ {static} void main(String[])
+}
+interface demos._4_interface_segregation.good.UIComponent {
+~ void validate()
+}
+class demos._4_interface_segregation.good.Smartphone {
++ void touch(String)
++ void swipe(String)
++ void validate()
+}
+interface demos._4_interface_segregation.good.UINonTouch {
+~ void mouseover(String)
+}
+class demos._4_interface_segregation.good.Desktop {
++ void mouseover(String)
++ void validate()
+}
+interface demos._4_interface_segregation.good.UITouch {
+~ void touch(String)
+~ void swipe(String)
+}
+
+
+demos._4_interface_segregation.good.UITouch <|.. demos._4_interface_segregation.good.Smartphone
+demos._4_interface_segregation.good.UIComponent <|-- demos._4_interface_segregation.good.UINonTouch
+demos._4_interface_segregation.good.UINonTouch <|.. demos._4_interface_segregation.good.Desktop
+demos._4_interface_segregation.good.UIComponent <|-- demos._4_interface_segregation.good.UITouch
+@enduml

@@ -1,0 +1,27 @@
+@startuml
+class demos._4_interface_segregation.bad.App {
++ {static} void main(String[])
+}
+interface demos._4_interface_segregation.bad.Component {
+~ void mouseover(String)
+~ void touch(String)
+~ void swipe(String)
+~ void validate()
+}
+class demos._4_interface_segregation.bad.Desktop {
++ void mouseover(String)
++ void touch(String)
++ void swipe(String)
++ void validate()
+}
+class demos._4_interface_segregation.bad.Smartphone {
++ void mouseover(String)
++ void touch(String)
++ void swipe(String)
++ void validate()
+}
+
+
+demos._4_interface_segregation.bad.Component <|.. demos._4_interface_segregation.bad.Desktop
+demos._4_interface_segregation.bad.Component <|.. demos._4_interface_segregation.bad.Smartphone
+@enduml

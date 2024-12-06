@@ -1,0 +1,53 @@
+@startuml
+class demos._2_open_closed.good.Food {
+- String name
+- String type
++ String getName()
++ void setName(String)
++ String getType()
++ void setType(String)
++ double calculatePriceWithTax()
+}
+class demos._2_open_closed.good.Electronics {
+- String name
+- String type
++ String getName()
++ void setName(String)
++ String getType()
++ void setType(String)
++ double calculatePriceWithTax()
+}
+abstract class demos._2_open_closed.good.Product {
+- String name
+- String type
+- double price
++ String getName()
++ void setName(String)
++ String getType()
++ void setType(String)
++ double getPrice()
++ void setPrice(double)
++ {abstract}double calculatePriceWithTax()
+}
+class demos._2_open_closed.good.Garment {
+- String name
+- String type
++ String getName()
++ void setName(String)
++ String getType()
++ void setType(String)
++ double calculatePriceWithTax()
+}
+class demos._2_open_closed.good.App {
+~ {static} Product product
+~ {static} List<Product> products
++ {static} void main(String[])
++ {static} List<Product> getProducts()
++ {static} double calculateTotalOrder(List<Product>)
+}
+
+
+demos._2_open_closed.good.Product <|-- demos._2_open_closed.good.Food
+demos._2_open_closed.good.Product <|-- demos._2_open_closed.good.Electronics
+demos._2_open_closed.good.Product <|-- demos._2_open_closed.good.Garment
+@enduml

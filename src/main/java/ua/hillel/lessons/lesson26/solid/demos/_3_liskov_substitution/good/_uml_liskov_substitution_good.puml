@@ -1,0 +1,15 @@
+@startuml
+class demos._3_liskov_substitution.good.Square {
+}
+class demos._3_liskov_substitution.good.App {
++ {static} void main(String[])
+}
+class demos._3_liskov_substitution.good.Rectangle {
+- double width
+- double height
++ double area()
+}
+
+
+demos._3_liskov_substitution.good.Rectangle <|-- demos._3_liskov_substitution.good.Square
+@enduml

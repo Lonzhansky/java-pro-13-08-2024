@@ -1,0 +1,38 @@
+@startuml
+class demos._2_creator.good.Order {
+- List<OrderItem> orderItems
+- String address
++ String getAddress()
++ void addOrderItem(int,String,double)
++ double getOrderCost()
+}
+
+
+class demos._2_creator.good.OrderItem {
+- Product product
+- int quantity
++ double getItemCost()
+}
+
+
+class demos._2_creator.good.Client {
+~ {static} String address
+~ {static} int quantity
+~ {static} String name
+~ {static} double price
++ {static} void main(String[])
+- {static} void getData()
+}
+
+
+class demos._2_creator.good.Product {
+- String name
+- double price
++ String getName()
++ void setName(String)
++ double getPrice()
++ void setPrice(int)
+}
+
+
+@enduml
