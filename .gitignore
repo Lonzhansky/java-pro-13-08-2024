@@ -7,6 +7,8 @@ out/
 *.iml
 out
 /target
+/logs
+*.log
 
 
 ### Eclipse ###
