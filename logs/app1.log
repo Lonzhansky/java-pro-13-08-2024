@@ -1,0 +1,24 @@
+2025-01-07 19:43:07,780 [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_01.DatabaseInitializer - Database initialization started
+2025-01-07 19:43:07,793 [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_01.DatabaseInitializer - Users table created or already exist
+2025-01-07 19:43:07,794 [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_01.DatabaseInitializer - Orders table created or already exist
+2025-01-07 19:43:07,802 [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_01.DatabaseInitializer - User_Order view created or already exist
+2025-01-07 19:44:19,661 [main] DEBUG ua.hillel.lessons.lesson32.log4j.demo_01.UserDAO - User found: Alex
+2025-01-07 19:44:19,666 [main] DEBUG ua.hillel.lessons.lesson32.log4j.demo_01.UserDAO - User found: Oleg
+2025-01-07 19:44:19,667 [main] DEBUG ua.hillel.lessons.lesson32.log4j.demo_01.UserDAO - User found: Max
+2025-01-07 19:44:19,667 [main] DEBUG ua.hillel.lessons.lesson32.log4j.demo_01.UserDAO - User found: Den
+2025-01-07 19:45:02,476 [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_01.DatabaseInitializer - Database initialization started
+2025-01-07 19:45:02,487 [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_01.DatabaseInitializer - Users table created or already exist
+2025-01-07 19:45:02,489 [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_01.DatabaseInitializer - Orders table created or already exist
+2025-01-07 19:45:02,495 [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_01.DatabaseInitializer - User_Order view created or already exist
+2025-01-07 19:45:08,406 [main] ERROR ua.hillel.lessons.lesson32.log4j.demo_01.UserDAO - Error adding user: qwe
+org.postgresql.util.PSQLException: ОШИБКА: ошибка синтаксиса (примерное положение: "IN123SERT")
+  Позиция: 1
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
+	at ua.hillel.lessons.lesson32.log4j.demo_01.UserDAO.addUser(UserDAO.java:21)
+	at ua.hillel.lessons.lesson32.log4j.demo_01.Main.main(Main.java:43)

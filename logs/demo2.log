@@ -1,0 +1,46 @@
+янв. 07, 2025 7:14:13 PM ua.hillel.lessons.lesson32.jul.demo_02.UserDAO addUser
+SEVERE: Error adding user: qweqwe
+янв. 07, 2025 7:15:45 PM ua.hillel.lessons.lesson32.jul.demo_02.UserDAO addUser
+SEVERE: Error adding user: qwe
+org.postgresql.util.PSQLException: ОШИБКА: ошибка синтаксиса (примерное положение: "INS123ERT")
+  Позиция: 1
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
+	at ua.hillel.lessons.lesson32.jul.demo_02.UserDAO.addUser(UserDAO.java:49)
+	at ua.hillel.lessons.lesson32.jul.demo_02.Main.main(Main.java:43)
+
+янв. 07, 2025 7:18:56 PM ua.hillel.lessons.lesson32.jul.demo_02.UserDAO addUser
+SEVERE: Error adding user: qwe
+org.postgresql.util.PSQLException: ОШИБКА: ошибка синтаксиса (примерное положение: "INS123ERT")
+  Позиция: 1
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
+	at ua.hillel.lessons.lesson32.jul.demo_02.UserDAO.addUser(UserDAO.java:49)
+	at ua.hillel.lessons.lesson32.jul.demo_02.Main.main(Main.java:43)
+
+янв. 07, 2025 7:19:35 PM ua.hillel.lessons.lesson32.jul.demo_02.UserDAO addUser
+SEVERE: Error adding user: qwe
+org.postgresql.util.PSQLException: ОШИБКА: ошибка синтаксиса (примерное положение: "INS123ERT")
+  Позиция: 1
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
+	at ua.hillel.lessons.lesson32.jul.demo_02.UserDAO.addUser(UserDAO.java:49)
+	at ua.hillel.lessons.lesson32.jul.demo_02.Main.main(Main.java:43)
+
+янв. 07, 2025 7:27:11 PM ua.hillel.lessons.lesson32.jul.demo_02.UserDAO viewUserById
+WARNING: User with id: 123123not found 

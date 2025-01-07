@@ -1,0 +1,25 @@
+2025-01-07 19:52:46 [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_02.DatabaseInitializer - Database initialization started
+2025-01-07 19:52:46 [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_02.DatabaseInitializer - Users table created or already exist
+2025-01-07 19:52:46 [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_02.DatabaseInitializer - Orders table created or already exist
+2025-01-07 19:52:46 [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_02.DatabaseInitializer - User_Order view created or already exist
+2025-01-07 19:52:53 [main] DEBUG ua.hillel.lessons.lesson32.log4j.demo_02.UserDAO - User found: Alex
+2025-01-07 19:52:53 [main] DEBUG ua.hillel.lessons.lesson32.log4j.demo_02.UserDAO - User found: Oleg
+2025-01-07 19:52:53 [main] DEBUG ua.hillel.lessons.lesson32.log4j.demo_02.UserDAO - User found: Max
+2025-01-07 19:52:53 [main] DEBUG ua.hillel.lessons.lesson32.log4j.demo_02.UserDAO - User found: Den
+[2025-01-07 20:02:12] [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_02.DatabaseInitializer - Database initialization started
+[2025-01-07 20:02:20] [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_02.DatabaseInitializer - Users table created or already exist
+[2025-01-07 20:02:21] [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_02.DatabaseInitializer - Orders table created or already exist
+[2025-01-07 20:02:22] [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_02.DatabaseInitializer - User_Order view created or already exist
+[2025-01-07 20:03:05] [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_02.DatabaseInitializer - Database initialization started
+[2025-01-07 20:03:05] [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_02.DatabaseInitializer - Users table created or already exist
+[2025-01-07 20:03:05] [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_02.DatabaseInitializer - Orders table created or already exist
+[2025-01-07 20:03:05] [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_02.DatabaseInitializer - User_Order view created or already exist
+[2025-01-07 20:04:16] [main] DEBUG ua.hillel.lessons.lesson32.log4j.demo_02.UserDAO - User found: Alex
+[2025-01-07 20:04:16] [main] DEBUG ua.hillel.lessons.lesson32.log4j.demo_02.UserDAO - User found: Oleg
+[2025-01-07 20:04:16] [main] DEBUG ua.hillel.lessons.lesson32.log4j.demo_02.UserDAO - User found: Max
+[2025-01-07 20:04:16] [main] DEBUG ua.hillel.lessons.lesson32.log4j.demo_02.UserDAO - User found: Den
+[2025-01-07 20:08:04] [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_02.DatabaseInitializer - Database initialization started
+[2025-01-07 20:08:04] [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_02.DatabaseInitializer - Users table created or already exist
+[2025-01-07 20:08:04] [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_02.DatabaseInitializer - Orders table created or already exist
+[2025-01-07 20:08:04] [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_02.DatabaseInitializer - User_Order view created or already exist
+[2025-01-07 20:10:43] [main] INFO  ua.hillel.lessons.lesson32.log4j.demo_02.UserDAO - User added successfully.
