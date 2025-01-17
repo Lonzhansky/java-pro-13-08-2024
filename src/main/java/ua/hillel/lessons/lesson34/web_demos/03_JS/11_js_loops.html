@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS | Loops</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+        <p>(1) Data: <span id="data-1"></span></p>
+        <p>(2) Data: <span id="data-2"></span></p>
+        <p>(3) Data: <span id="data-3"></span></p>
+        <p>(4) Data: <span id="data-4"></span></p>
+        <p>(5) Data: <span id="data-5"></span></p>
+        <p>(6) Data: <span id="data-6"></span></p>
+        <p>(7) Data: <span id="data-7"></span></p>        
+
+        <script>
+
+            // Цикл while ------------
+            let a1 = 1;
+            let str1 = "";
+            while(a1 <= 4) {
+                // Через += конкатенуємо значення
+                str1 += a1 + " ";
+                a1++;
+            }
+            document.getElementById("data-1").innerHTML = str1;
+
+            // Цикл do-while --------------
+            let a2 = 1;
+            let str2 = "";            
+            do {
+                // Через += конкатенуємо значення
+                str2 += a2 + " ";
+                a2++;
+            }
+            while(a2 <= 4);
+            document.getElementById("data-2").innerHTML = str2;                       
+
+            // Цикл for ----------------
+            let items = ["Apple", "Mango", "Banana", "Orange"];
+            let itemsStr = "";
+        
+            for(let i = 0; i < items.length; i++) {
+                // Через += конкатенуємо значення
+                itemsStr += items[i] + " ";
+            }
+            document.getElementById("data-3").innerHTML = itemsStr;
+
+            // Цикл for-in — особливий тип циклу, який перебирає 
+            // властивості об’єкта або елементи масиву.
+
+            // Об'єкт з певними властивостями 
+            let user = {
+                "firstName": "Tom", 
+                "lastName": "Green", 
+                "email": "tom@mail.com"
+            };
+            let userStr = "";
+            // Ітеруємо по властивостям об'єкта
+            for(let prop in user) {
+                // Через += конкатенуємо значення
+                userStr += prop + "=" + user[prop] + " ";   
+            }
+            document.getElementById("data-4").innerHTML = userStr;
+
+            let itemsStr2 = "";
+            // Ітеруємо по елементам масива
+            for(let item in items) {
+                // Через += конкатенуємо значення
+                itemsStr2 += items[item] + " ";
+            }
+            document.getElementById("data-5").innerHTML = itemsStr2;
+
+            // ES6 (ECMAScript 2015, ECMAScript 6) представляє 
+            // цикл for-of, який дозволяє перебирати масиви або 
+            // інші ітеровані об’єкти (наприклад, рядки).
+            // Цикл for-of не працює з об’єктами, оскільки вони 
+            // не підлягають ітерації. Переглянути властивості 
+            // об’єкта, можна через цикл for-in.
+
+            let itemsStr3 = "";
+            // Ітерація масивом
+            for(let item of items) {
+                // Через += конкатенуємо значення
+                itemsStr3 += "<br>" + item;
+            }
+            document.getElementById("data-6").innerHTML = itemsStr3;
+
+            let description = "My Super App!";
+            let str3 = "";
+            // Ітерація рядка
+            for(let char of description) {
+                // Через += конкатенуємо значення
+                str3 += "<br>" + char;               
+            }
+            document.getElementById("data-7").innerHTML = str3;
+
+        </script>
+    </body>
+</html>

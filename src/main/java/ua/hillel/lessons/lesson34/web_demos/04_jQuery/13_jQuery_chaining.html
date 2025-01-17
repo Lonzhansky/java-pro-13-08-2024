@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery | Method Chaining</title>		
+		<meta charset="utf-8">
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<style>
+		p {
+			width: 200px;
+			padding: 40px 0;
+			font: bold 24px sans-serif;
+			text-align: center;
+			background: #aaccaa;
+			border: 1px solid #63a063;
+			box-sizing: border-box;
+		}
+		</style>
+		<script>
+			$(function(){
+				$(".start").click(function(){
+					$("p").animate({width: "100%"}).animate({fontSize: "46px"}).animate({borderWidth: 30});
+				});
+				$(".reset").click(function(){
+					$("p").removeAttr("style");
+				});
+			});  
+		</script>
+	</head>
+	<body>
+		<p>My Super App!</p>
+		<button type="button" class="start">Start Chaining</button>
+		<button type="button" class="reset">Reset</button>
+	</body>
+</html>                                		                                		

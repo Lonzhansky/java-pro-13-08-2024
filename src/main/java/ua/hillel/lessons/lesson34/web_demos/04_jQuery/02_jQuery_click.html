@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery | Click Event</title>		
+		<meta charset="utf-8">
+		<!-- Підтягуємо jQuery звідси 
+			https://jquery.com/download/#jquery-cdn -->
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<style>
+			p{
+				padding: 20px;
+				font: 20px sans-serif;
+				background: #33ffbb;
+			}
+		</style>
+		<script>
+			$(function(){
+				$("p").click(function(){
+					$(this).slideUp();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p>Click on me and I'll disappear.</p>
+		<p>Click on me and I'll disappear.</p>
+	</body>
+</html>

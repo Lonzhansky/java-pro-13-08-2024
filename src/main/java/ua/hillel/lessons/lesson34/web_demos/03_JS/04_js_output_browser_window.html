@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS | Output Browser Window</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+      // Можна використовувати метод document.write() 
+      // для запису вмісту в поточний документ.
+      // Метод document.write пише текст прямо в HTML. 
+      // Є давнім методом JS. Тут використовується 
+      // як простий метод виведення значення змінних 
+      // в HTML-документ.
+      let x = 5;
+      let y = 10;
+      let sum = x + y;
+      document.write("Result is " + sum);
+    </script>
+    <h1>This is my title</h1>
+    <!-- При натисканні на кнопку, в HTML, має з'явитися певний текст -->
+    <button type="button" onclick="document.write('My Text!')">Click Me</button>
+  </body>
+</html>

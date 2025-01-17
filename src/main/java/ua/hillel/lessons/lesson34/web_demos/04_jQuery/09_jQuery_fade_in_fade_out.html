@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery | Fade-In Fade-Out</title>		
+		<meta charset="utf-8">
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<style>
+			p{
+				padding: 16px;
+				background: #33ffbb;
+			}
+		</style>
+		<script>
+			$(function(){
+
+				$(".out-btn").click(function(){
+					$("p").fadeOut();
+				});
+				
+				$(".in-btn").click(function(){
+					$("p").fadeIn();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button type="button" class="out-btn">Fade Out Paragraphs</button>
+		<button type="button" class="in-btn">Fade In Paragraphs</button>
+		<p>This is a paragraph.</p>
+		<p>This is another paragraph.</p>
+	</body>
+</html>                                		

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML | Styles</title>
+		<meta charset="UTF-8">
+
+		<!-- Зовнішні (External) стилі -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+		<!-- Внутрішній (Internal/Embedded) стиль -->
+		<style>
+			/* background-color (колір фону) тегу body */
+			body { 
+				background-color: gainsboro;
+			}
+			/* 
+				color (колір шрифту) тегу h1,
+				font-size (розмір шрифту) тегу h1	
+			*/
+			h1 { 
+				color: green;
+				font-size: 28px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			HTML доволі обмежений щодо представлення Web-сторінки. 
+			Для надання HTML-сторінки більш виразного вигляду (стилізації) 
+			застосовується CSS (Cascading Style Sheets, каскадні таблиці стилів).
+
+			Стиль можна додати як окремий документ або вставити в сам 
+			HTML документ. Методи додавання стилей:
+			- Вбудовані (Inline) стилі  — використання атрибута style 
+			  в початковому HTML тегу.
+			- Внутрішній (Internal/Embedded) стиль — використання елемента 
+			  <style> в заголовку HTML документа.
+			- Зовнішні (External) стилі — використання елемента <link>, 
+			  що вказує на зовнішні CSS файл(и).
+		-->
+    
+		<!-- Вбудовані (Inline) стилі -->
+		<!-- 
+			властивість font-size (розмір шрифту) має значення 24px. 
+			властивість color (колір тексту) має значення red.	
+		-->
+		<p style="font-size: 24px; color: red;">
+			Lorem ipsum dolor sit amet.
+		</p>
+		<!-- 
+			властивість font-size (розмір шрифту) має значення 32px.
+			властивість font-weight (вага шрифту) має значення bold.
+			властивість color (колір тексту) має значення blue.	
+		-->
+		<p style="font-size: 32px; font-weight: bold; color: blue;">
+			Lorem ipsum dolor sit amet.
+		</p>
+		
+		<h1>Dolor sit amet</h1>
+
+		<h3>1) Dolor sit amet</h3>
+
+		<h3 id="title">2) Dolor sit amet</h3>
+
+	</body>
+</html>
+

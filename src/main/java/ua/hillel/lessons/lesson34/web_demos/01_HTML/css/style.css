@@ -1,0 +1,7 @@
+
+/* стиль тегу h3 за ідентифікатором title */
+h3#title{
+	font-size: 28px;
+	font-weight: bold;
+	color: blue;
+}

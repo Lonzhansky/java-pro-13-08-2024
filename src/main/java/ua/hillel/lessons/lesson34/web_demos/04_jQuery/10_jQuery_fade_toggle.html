@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery | Fade-Toggle Effect</title>		
+		<meta charset="utf-8">
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<style>
+			p{
+				padding: 16px;
+				background: #33ffbb;
+			}
+		</style>
+		<script>
+			$(function(){
+				$(".toggle-btn").click(function(){
+					$("p").fadeToggle();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button type="button" class="toggle-btn">Fade Toggle Paragraphs</button> 
+		<p>This is a paragraph.</p>
+		<p>This is another paragraph.</p>
+	</body>
+</html>                                		                                		

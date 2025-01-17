@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery | Show Hide Effects</title>		
+		<meta charset="utf-8">
+		<!-- Підтягуємо jQuery звідси 
+			https://jquery.com/download/#jquery-cdn -->
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<style>
+			p{
+				padding: 16px;
+				background: #49ff45;
+			}
+		</style>
+		<script>
+			$(function(){
+
+				$(".hide-btn").click(function(){
+					$("p").hide();
+				});
+				
+
+				$(".show-btn").click(function(){
+					$("p").show();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button type="button" class="hide-btn">Hide Paragraphs</button> 
+		<button type="button" class="show-btn">Show Paragraphs</button>
+		<p>This is a paragraph.</p>
+		<p>This is another paragraph.</p>
+	</body>
+</html>

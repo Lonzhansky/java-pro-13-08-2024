@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery | Change Event</title>		
+		<meta charset="utf-8">
+		<!-- Підтягуємо jQuery звідси 
+			https://jquery.com/download/#jquery-cdn -->
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<script>
+			$(function(){
+				$("select").change(function(){
+					let selectedOption = $(this).find(":selected").val();
+					alert("You have selected - " + selectedOption);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<form>
+			<label>City:</label>
+			<select>
+				<option>London</option>
+				<option>Paris</option>
+				<option>New York</option>
+			</select>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sunny-Tours</title>
+        <link rel='shortcut icon' href="icons/favicon.ico">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    </head>
+    <body style="background-color: #f7ffcc;">
+        <!-- Content -->
+        <div class="d-flex justify-content-center align-items-center text-white p-3 fs-1 fw-bold"
+            style="background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); font-size: 32px;">
+            <i class="bi-sun-fill" style="font-size: 3rem; color: #f1f73e;"></i>&nbsp;Sunny Tours
+        </div>
+        <div>
+            <img src="images/palms_1920.jpg" class="img-fluid" alt="header-image">
+        </div>
+        <div class="container p-5">
+            <div class="container">
+                <div class="p-3 fs-4">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Donec tempor mi nulla, eu aliquam massa rutrum eu.
+                    Nam tempus ultrices mauris. Integer mattis massa magna, vitae blandit
+                    erat pretium id. In et velit vel metus ultrices consequat eget ac enim.
+                    Praesent id mi laoreet, tincidunt elit sit amet, laoreet erat.
+                    Cras rhoncus justo sem. Fusce at enim placerat, elementum est at,
+                    venenatis arcu.
+                </div>
+            </div>
+            <div class="container">
+                <h3>Tour places</h3>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+                    <div class="card p-2 m-0.5">
+                        <img src="images/sunny-club.jpg" class="card-img-top" alt="sunny-club-img">
+                        <div class="card-body">
+                            <p class="card-text fs-4">Sunny Club</p>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <div class="card p-2 m-0.5">
+                        <img src="images/fish-farm.jpg" class="card-img-top" alt="fish-farm-img">
+                        <div class="card-body">
+                            <p class="card-text fs-4">Fish Farm</p>
+                            <p class="card-text">Donec tempor mi nulla, eu aliquam massa rutrum eu.
+                                Nam tempus ultrices mauris.</p>
+                        </div>
+                    </div>
+                    <div class="card p-2 m-0.5">
+                        <img src="images/azure-beach.jpg" class="card-img-top" alt="azure-beach-img">
+                        <div class="card-body">
+                            <p class="card-text fs-4">Azure Beach</p>
+                            <p class="card-text">In et velit vel metus ultrices consequat eget ac enim.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h3>Resorts</h3>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+                    <div class="card p-2 m-0.5">
+                        <img src="images/resort-01_640.jpg" class="card-img-top" alt="resort-01-img">
+                        <div class="card-body">
+                            <p class="card-text">Fusce at enim placerat, elementum est at.</p>
+                        </div>
+                    </div>
+                    <div class="card p-2 m-0.5">
+                        <img src="images/resort-02_640.jpg" class="card-img-top" alt="resort-02-img">
+                        <div class="card-body">
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <div class="card p-2 m-0.5">
+                        <img src="images/resort-03_640.jpg" class="card-img-top" alt="resort-03-img">
+                        <div class="card-body">
+                            <p class="card-text">Donec tempor mi nulla, eu aliquam massa rutrum eu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+        <div class="d-flex justify-content-center align-items-center p-3">
+            <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#proposalModal">
+                <i class="bi bi-emoji-sunglasses"></i> Special proposal
+            </button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="proposalModal" tabindex="-1" aria-labelledby="proposalModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="proposalModalLabel" class="modal-title" style="color: #c72c67"><i class="bi bi-emoji-sunglasses"></i>
+                            Special proposal</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body justify-content-center">
+                        <img src="images/hotel.jpg" alt="proposal-image">
+                        <p style="font-size: 24px; color: #c72c67;">Sea Hotel. Three nights FREE.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Content -->
+        <!-- Footer -->
+        <div class="container-fluid justify-content-center p-3" style="background-color: #99e1f7;">
+            <p class="text-center fs-4">
+                <i class="bi bi-facebook"></i>&nbsp;&nbsp;
+                <i class="bi bi-instagram"></i>&nbsp;&nbsp;
+                <i class="bi bi-telegram"></i>
+            </p>
+            <p class="text-center" style="font-size: 18px">Address: Rainbow St. 12, MainCity, 00125<br>
+                <span class="bi bi-telephone-fill"></span> Phone: +011 555 123-4587<br>
+                <span class="bi bi-envelope"></span> E-mail: sunnytours@mail.com<br>
+                <span class="p-3" style="font-size: 12px">&copy; Sunny Tours, LLC</span>
+            </p>
+        </div>
+        <!-- /Footer -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+        crossorigin="anonymous"></script>
+    </body>
+</html>

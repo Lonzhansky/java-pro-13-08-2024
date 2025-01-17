@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML | Forms</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<!--
+			HTML-форми потрібні для збору різних типів введених 
+			користувачами даних, таких як ім’я, адреса електронної пошти, 
+			номери телефонів тощо.
+			
+			Форми містять спеціальні елементи, які називаються елементами 
+			керування, наприклад поле введення, прапорці, перемикачі, кнопки 
+			надсилання тощо.
+		-->   
+		<form>
+			<fieldset style="width: 300px; ">
+			<legend>QUESTIONNAIRE</legend>			
+				First name: <input type="text" name="firstname"/><br/><br/>
+				Last name: <input type="text" name="lastname"/><br/><br/>
+				<label for="username">Username:</label>
+    			<input type="text" name="username" id="username"><br/><br/>
+				PASS: <br/><input type="password" name="pass"/>
+				<p>Season: </p>
+					<input type="checkbox" name="space" value="1"/> Winter<br/>
+					<input type="checkbox" name="space" value="2"/> Spring<br/>
+					<input type="checkbox" name="space" value="3"/> Summer<br/>
+					<input type="checkbox" name="space" value="4"/> Autumn<br/>
+				<p>Place of residence: </p>
+				<select name="residence" >
+					<option value="c"> city </option>
+					<option value="s"> town </option>
+					<option value="v"> village </option>
+				</select>
+				<p> Notification method: </p>
+				<select name='fruit1' multiple='multiple'>
+					<option value='e'> e-mail </option>
+					<option value='l'> by letter by mail </option>
+					<option value='s'> SMS </option>
+					<option value='с'> courier </option>
+					<option value='st'> site </option>
+					<option value='n'> none </option>
+				</select><br/><br/>
+				<input type="submit" value="SEND"/>
+			</fieldset>
+		</form>
+	</body>
+</html>
+

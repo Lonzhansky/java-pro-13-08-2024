@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>03_HTTP_Concept</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<section id="поняття-http." class="level2">
+<h2>Поняття HTTP.</h2>
+<hr />
+<p><strong>HTTP (Hypertext Transfer Protocol) є основою</strong> для обміну інформацією в Інтернеті.</p>
+<p><strong>Ключові концепції HTTP.</strong></p>
+<p><strong>Клієнт-Серверна Модель.</strong> HTTP використовує модель клієнт-сервер, де клієнт (наприклад, Web-браузер) взаємодіє з сервером (наприклад, Web-сервер) для отримання ресурсів (сторінки, файли).</p>
+<p><strong>Запит (Request) та Відповідь (Response).</strong> Клієнт відправляє запит на сервер, а сервер відповідає на цей запит, передаючи дані або повідомлення про помилку.</p>
+<p><strong>URI</strong> (Uniform Resource Identifier, Уніфікований ідентифікатор ресурсу) – унікальна послідовність символів, що ідентифікує ресурс в мережі.</p>
+<p>URI має формат:</p>
+<pre><code>&lt;protocol&gt;://&lt;service-name&gt;/&lt;ResourceType&gt;/&lt;ResourceID&gt;</code></pre>
+<p>Типами URI є URN та URL.</p>
+<p><strong>URN</strong> (Uniform Resource Name, Універсальне ім’я ресурсу) ідентифікує ресурс за допомогою імені, яке є одночасно унікальним та постійним. URN не завжди вказує, де знайти ресурс в Інтернеті. URN використовуються як шаблони, які використовують інші парсери для ідентифікації ресурсу.</p>
+<p>URN слідують схемі <code>urn</code> і зазвичай мають префікс <code>urn:</code>. Наприклад, <code>urn:isbn:1234567890</code> використовується для ідентифікації книги за номером ISBN (International Standard Books Number) у бібліотечному додатку.</p>
+<p>Щоразу, коли URN ідентифікує документ, URN перетворюються на URL-адресу, після чого документ може бути завантажений.</p>
+<p><strong>URL</strong> (Uniform Resource Locator, Уніфікований покажчик ресурсів) містить інформацію про отримання ресурсу з його розташування.</p>
+<pre><code>http://abc.com/contacts.html</code></pre>
+<p>URL-адреси починаються з протоколу (наприклад, <code>http</code>) і містять інформацію про ім’я мережевого хоста (наприклад, <code>abc.com</code>) та шляхи до Web-документа (наприклад, <code>/contacts.html</code>).</p>
+<p>URN ідентифікує ресурс, а URL вказує шлях ресурсу. URN розроблений таким чином, що ідентифікатор не залежить від того, де зберігаються дані, URL вказують на конкретне місце, де знаходиться ресурс. Обидва формати ідентифікаторів схожі один на одного за своєю конструкцією, але служать різним цілям.</p>
+<p><strong>Методи Запиту.</strong> HTTP визначає різні методи запиту, такі як GET (отримати ресурс), POST (надіслати дані для обробки), PUT (оновити чи створити ресурс), DELETE (видалити ресурс) та інші.</p>
+<p><strong>Статус-коди.</strong> Сервер повертає статус-код у відповідь, який вказує на результат обробки запиту. Наприклад, код 200 означає успішну відповідь, а 404 - що ресурс не знайдено.</p>
+<p><strong>Заголовки.</strong> HTTP-запити та відповіді можуть містити заголовки, які надають додаткову інформацію про запит або відповідь. Наприклад, заголовок “Content-Type” вказує на тип даних, які передаються.</p>
+<p><strong>Сесії та Кукі.</strong> HTTP обробляє кожен запит, який відсилається серверу, незалежно від попередніх запитів без збереження стану, але якщо стан все ж необхідно зберігати, використовуються сесії та кукі.</p>
+<p><strong>Безпека (HTTPS).</strong> HTTPS (Hypertext Transfer Protocol Secure) використовує шифрування для захисту конфіденційності та цілісності передачі даних між клієнтом і сервером.</p>
+<p><strong>Кешування.</strong> HTTP підтримує кешування, де клієнти можуть зберігати копії ресурсів для зменшення навантаження на сервер та прискорення завантаження сторінок.</p>
+<p>Розуміння цих ключових концепцій HTTP важливо для розробників та адміністраторів мереж, оскільки це допомагає оптимізувати та усунути проблеми взаємодії між клієнтами та серверами.</p>
+</section>
+</body>
+</html>

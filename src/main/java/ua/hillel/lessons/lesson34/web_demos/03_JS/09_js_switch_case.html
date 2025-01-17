@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>JS | Switch Case</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<!--
+			Інструкція switch-case перевіряє змінну або вираз 
+            на ряд значень, доки не буде знайдено збіг, а потім 
+            виконує блок коду, який відповідає цьому збігу.
+		-->
+		
+        <p>Result is <span id="result-1"></span></p>
+
+		<script>
+
+            let d = 8;
+                
+            switch(d) {
+                case 8:
+                    document.getElementById("result-1").innerHTML = "abc 11";
+                    break;
+                case 10:
+                    document.getElementById("result-1").innerHTML = "abc 12";
+                    break; 
+                default:
+                    document.getElementById("result-1").innerHTML = "abc 13";
+            }
+		</script>
+	</body>
+</html>

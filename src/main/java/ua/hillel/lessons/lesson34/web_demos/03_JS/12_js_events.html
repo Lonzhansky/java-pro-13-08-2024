@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS | Events</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!--
+            Подія (event) — те, що відбувається, коли користувач 
+            взаємодіє з Web-сторінкою, наприклад, коли натискає 
+            посилання чи кнопку, вводить текст у поле введення тощо.
+            Коли відбувається подія, можна використовувати обробник 
+            подій JavaScript (або прослуховувач подій), щоб виявити 
+            їх і виконати конкретне завдання або набір завдань.
+            Події мають різні типи, розглянемо деякі.
+        -->
+
+        <!--
+            Подія клікання (click) відбувається, коли користувач 
+            клікає елемент на Web-сторінці. Найчастіше це елементи 
+            форм і посилання. Можна обробити подію клікання за 
+            допомогою обробника події onclick.
+        -->
+        <button type="button" onclick="alert('Button has been clicked!');">Click Me</button>
+        <a href="#" onclick="alert('Link has been clicked!');">Click Me</a><br><br>
+
+
+        <!--
+            Подія contextmenu виникає, коли користувач клікає правою 
+            кнопкою миші на елементі, щоб відкрити контекстне меню. 
+            Можна обробити подію контекстного меню за допомогою 
+            обробника події oncontextmenu.
+        -->
+        <button type="button" oncontextmenu="alert('Button has been right clicked!');">Right Click on Me</button><br><br>
+
+
+        <!--
+            Подія наведення миші виникає, коли користувач наводить 
+            вказівник миші на елемент.
+            Можна обробити подію наведення миші за допомогою обробника 
+            події onmouseover.
+        -->
+        <button type="button" onmouseover="alert('Mouse pointer has been over a button!');">Place Mouse Over Me</button><br><br>
+        
+        
+        <!--
+            Подія надсилання (submit) виникає лише тоді, коли 
+            користувач надсилає форму на Web-сторінці.
+            Можна обробити подію надсилання за допомогою обробника 
+            події onsubmit.
+        -->
+    
+        <form action="/abc/users" method="post" onsubmit="alert('Form data will be saved!');">
+            <label>First name:</label><br>
+            <input id="first-name" name="first-name" type="text"><br>
+            <label>Last name:</label><br>
+            <input id="last-name" name="last-name" type="text"><br>
+            <input type="submit" value="Submit">
+       </form>
+       
+    </body>
+</html>

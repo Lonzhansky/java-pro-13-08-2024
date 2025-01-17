@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>JS | Operators</title>
+            <meta charset="utf-8">
+      </head>
+      <body>
+            <!--
+            Оператори — символи або ключові слова, які повідомляють 
+            JavaScript виконувати певні дії.
+            -->
+            
+            <!-- Формуємо HTML елементи -->
+            <p>(1) Result is <span id="result-1"></span></p>
+            <p>(2) Result is <span id="result-2"></span></p>
+            <p>(3) Result is <span id="result-3"></span></p>
+            <p>(4) Result is <span id="result-4"></span></p>
+            <p>(5) Result is <span id="result-5"></span></p>
+            <p>(6) Result is <span id="result-6"></span></p>
+            <p>(7) Result is <span id="result-7"></span></p>
+            <p>(8) Result is <span id="result-8"></span></p>
+            <p>(9) Result is <span id="result-9"></span></p>
+            <p>(10) Result is <span id="result-10"></span></p>
+            <p>(11) Result is <span id="result-11"></span></p>
+            <p>(12) Result is <span id="result-12"></span></p>
+            <p>(13) Result is <span id="result-13"></span></p>
+            <p>(14) Result is <span id="result-14"></span></p>
+            <p>(15) Result is <span id="result-15"></span></p>
+            <p>(16) Result is <span id="result-16"></span></p>
+            <p>(17) Result is <span id="result-17"></span></p>
+
+            <script>
+
+                  // Аріфметичні оператори ----------------
+                  let a = 12;
+                  let b = 6;
+
+                  let result1 = a + b;
+                  document.getElementById("result-1").innerHTML = result1;
+
+                  let result2 = a - b;
+                  document.getElementById("result-2").innerHTML = result2;
+
+                  let result3 = a * b;
+                  document.getElementById("result-3").innerHTML = result3;
+
+                  let result4 = a / b;
+                  document.getElementById("result-4").innerHTML = result4;            
+
+                  let result5 = a % b;
+                  document.getElementById("result-5").innerHTML = result5;
+
+                  // Оператори присвоєння ----------------
+                  let c;
+
+                  c = 8;
+                  document.getElementById("result-6").innerHTML = c;
+                  
+                  c = 10;
+                  c += 3;
+                  document.getElementById("result-7").innerHTML = c;
+                  
+                  c = 12;
+                  c -= 4;
+                  document.getElementById("result-8").innerHTML = c;
+                  
+                  c = 15;
+                  c *= 3;
+                  document.getElementById("result-9").innerHTML = c;
+                  
+                  c = 24;
+                  c /= 8;
+                  document.getElementById("result-10").innerHTML = c;
+                  
+                  c = 20;
+                  c %= 6;
+                  document.getElementById("result-11").innerHTML = c;
+
+                  // Оператори інкременту та декременту ---------------
+
+                  let d;
+
+                  d = 10;
+                  document.getElementById("result-12").innerHTML = ++d + " and " + d;
+                  
+                  d = 10;
+                  document.getElementById("result-13").innerHTML = d++ + " and " + d;
+                  
+                  d = 10;
+                  document.getElementById("result-14").innerHTML = --d + " and " + d;
+                  
+                  d = 10;
+                  document.getElementById("result-15").innerHTML = d-- + " and " + d;
+
+                  // Логічні оператори -----------------------
+                  // && (AND), || (OR), ! (NOT)
+                  let e = 8;
+
+                  if(e < 10 && e > 5 ) {
+                        document.getElementById("result-16").innerHTML = "abc 161";
+                  } else {
+                        document.getElementById("result-16").innerHTML = "abc 162";
+                  }
+
+                  // Оператори порівняння -------------------
+                  // == (дорівнює), < , > , <= , >= , != , 
+                  // === (ідентичний), !== (неідентичний). 
+                  // Ідентичність визначається за типом значення.
+
+                  let a1 = 15;
+                  let b1 = 25;
+                  let c1 = "15";
+                  let res1 = a1 == c1;
+                  let res2 = a1 === c1;
+                  let res3 = a1 != b1;
+                  let res4 = a1 !== c1;
+                  let res5 = a1 < b1;
+                  let res6 = a1 > b1;
+                  let res7 = a1 <= b1;
+                  let res8 = a1 >= b1;
+
+                  document.getElementById("result-17").innerHTML = " res1=" + res1 + 
+                  ", res2=" + res2 + ", res3=" + res3 + ", res4=" + res4 + ", res5=" + res5 + 
+                  ", res6=" + res6 + ", res7=" + res7 + ", res8=" + res8;
+
+            </script>
+      </body>
+</html>

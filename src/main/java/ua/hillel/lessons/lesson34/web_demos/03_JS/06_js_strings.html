@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS | Strings</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<!--
+			Рядок (string) — послідовність літер, цифр, 
+            спеціальних символів і арифметичних значень 
+            або їх комбінація. 
+            Рядки можна створити шляхом укладення рядкового 
+            літералу (певний набір символів рядка) в одинарні (') 
+            або подвійні лапки (").
+		-->
+		<p>(1) Result is <span id="result-1"></span></p>
+        <p>(2) Result is <span id="result-2"></span></p>
+        <p>(3) Result is <span id="result-3"></span></p>
+        <p>(4) Result is <span id="result-4"></span></p>
+        <p>(5) Result is <span id="result-5"></span></p>
+        <p>(6) Result is <span id="result-6"></span></p>
+        <p>(7) Result is <span id="result-7"></span></p>
+        <p>(8) Result is <span id="result-8"></span></p>
+        <p>(9) Result is <span id="result-9"></span></p>
+        <p>(10) Result is <span id="result-10"></span></p>
+        <p>(11) Result is <span id="result-11"></span></p>
+        <p>(12) Result is <span id="result-12"></span></p>
+
+		<script>
+            let str1 = 'My App # 1.'; // Одинарні лапки
+            let str2 = "My App # 2."; // Подвійні лапки
+            // Поєднання одинарних  та подвійних лапок
+            let str3 = "This is 'My App # 3.'";
+			
+            // Виводимо текст в HTML елемент
+			document.getElementById("result-1").innerHTML = str1;
+			document.getElementById("result-2").innerHTML = str2;
+            document.getElementById("result-3").innerHTML = str3;
+            
+            // Властивість length повертає довжину рядка
+            let str4 = "Lorem ipsum dolor sit amet.";
+            let str4Length = str4.length;
+            document.getElementById("result-4").innerHTML = str4Length;
+
+            // Метод indexOf() дозволяє знайти підрядок 
+            // або рядок в іншому рядку. Цей метод повертає індекс 
+            // або позицію першого входження зазначеного рядка в рядку.
+            let str5 = "Lorem amet ipsum dolor sit amet.";
+            let pos1 = str5.indexOf("amet");
+            document.getElementById("result-5").innerHTML = pos1;
+
+            // Метод lastIndexOf() дозволяє отримати індекс або 
+            // позицію останнього входження зазначеного рядка в рядку.
+            let str6 = "Lorem amet ipsum dolor sit amet.";
+            let pos2 = str6.lastIndexOf("amet");
+            document.getElementById("result-6").innerHTML = pos2;
+            
+            // Методи indexOf() та lastIndexOf() повертають -1, 
+            // якщо підрядок не знайдено.
+
+            // Можна використовувати метод slice(), щоб отримати 
+            // частину або підрядок із рядка.
+            // Цей метод приймає 2 параметри: 
+            // початковий індекс (індекс, з якого розпочинається 
+            // отримання) та необов’язковий кінцевий індекс (індекс, 
+            // перед яким завершується отримання).
+            let str7 = "Lorem amet ipsum dolor sit amet.";
+            let subStr1 = str7.slice(6, 16);
+            document.getElementById("result-7").innerHTML = "'" + subStr1 + "'";
+
+            // Можна вказати від’ємні значення як параметри 
+            // методу slice(). Від’ємне значення розглядається 
+            // як strLength + startIndex, де strLength – довжина 
+            // рядка (тобто str.length), наприклад, якщо startIndex 
+            // дорівнює -5, воно розглядається як strLength – 5. 
+            // Якщо startIndex більше або дорівнює довжині рядка, 
+            // метод slice() повертає порожній рядок.
+            // Крім того, якщо необов’язковий endIndex не вказано, 
+            // метод slice() отримує кінцевий набір символів рядка.
+            let str8 = "Lorem amet ipsum dolor sit amet.";
+            let str8Length = str8.length;
+            let str8Slice1 = str8.slice(-15, -6);
+            let str8Slice2 = str8.slice(17);
+            document.getElementById("result-8").innerHTML = str8Length + 
+            " '" + str8Slice1 + "' " + "'" + str8Slice2 + "'";
+
+            // JavaScript також надає метод substr(), який схожий 
+            // на slice() з відмінністю: другий параметр визначає 
+            // кількість символів, які потрібно отримати, замість 
+            // кінцевого індексу, наприклад str.substr(startIndex, length). 
+            // Якщо length дорівнює 0 або від’ємне число, повертається 
+            // порожній рядок.
+            let str9 = "Lorem amet ipsum dolor sit amet.";
+            // Коментуємо та декоментуємо рядки коду для різних прикладів
+            let str9Sub = str9.substr(6, 10);
+            // let str9Sub = str9.substr(-15, -6);
+            // let str9Sub = str9.substr(-15, 6);
+            // let str9Sub = str9.substr(17);
+            document.getElementById("result-9").innerHTML = "'" + str9Sub + "'";
+
+            // Метод replace() дозволяє замінити частину рядка 
+            // іншим рядком. За замовчуванням метод replace() замінює 
+            // лише перший збіг, і він чутливий до регістру.
+            let str10 = "Lorem amet ipsum dolor sit amet.";
+            let str10Replace = str10.replace("amet", "disco");
+            document.getElementById("result-10").innerHTML = "'" + str10Replace + "'";
+
+            // Метод toUpperCase() перетворює рядок у верхній регістр. 
+            // Метод toLowerCase() перетворює рядок на нижній регістр.
+            let str11 = "Lorem amet";
+            let str11Upper = str11.toUpperCase();
+            let str11Lower = str11.toLowerCase();
+            document.getElementById("result-11").innerHTML = "(a) '" + str11Upper + 
+            "' (b) '" + str11Lower + "'";
+
+            // Можна об’єднати (конкатенувати) два чи більше рядка 
+            // за допомогою оператора + або оператора присвоєння +=
+            let str12 = "Lorem amet";
+            let str13 = "ipsum dolor";
+            let str1213 = str12 + " " + str13;
+            
+            let str14 = "Ipsum dolor";
+                str14 += " lorem amet";
+            
+            document.getElementById("result-12").innerHTML = "(a) '" + str1213 + 
+            "' (b) '" + str14 + "'";
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS | Selectors</title>
+		<meta charset="UTF-8">
+
+		<!-- Зовнішня декларація CSS -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+			
+		<!-- Внутрішня декларація CSS -->
+		<style>
+			/* 
+				Селектор ідентифікатора використовується для визначення 
+				правил стилю для одного (унікального) елемента в певному 
+				HTML документі.
+				Селектор ідентифікатора визначається символом решітки (#), 
+				після якого відразу йде значення ідентифікатора. 
+			*/
+			#block {
+				font-size: 32px;
+				font-weight: bold;
+				color: blue;
+			}
+			
+			/* 
+				Селектори класів можна використовувати для вибору 
+				будь-якого HTML елемента, який має атрибут класу. 
+				Усі елементи цього класу будуть відформатовані 
+				відповідно до визначеного правила.
+				Селектор класу визначається знаком крапки (.), після 
+				якого відразу йде значення класу.
+			*/
+			.block {
+				font-size: 28px;
+				font-weight: normal;
+				color: green;
+			}
+			
+			/* Комбінований селектор */
+			p#test {
+				font-size: 16px;		
+				color: red;
+			}
+
+			h3#title {
+				font-size: 32px;
+				color: red;
+			}
+
+			/* 
+				Селектор типу елемента зіставляє всі екземпляри елемента 
+				в документі з назвою відповідного типу елемента. 
+			*/
+			h2 {
+				font-size: 32px;
+				background: yellow;
+			}
+			
+			/* Коментований CSS код
+			p {
+				background: yellow;
+			}
+			*/		
+		</style>
+	</head>
+	<body>
+		<!-- Локальний/рядковий CSS -->
+		<p style="font-size: 24px; color: red;">Lorem ipsum 
+			dolor sit amet.</p>
+		
+		<!-- HTML за внутрішньою декларацією CSS -->
+		<p id="block">Lorem ipsum dolor sit amet id=block.</p>
+		<p class="block">Lorem ipsum dolor sit amet class=block.</p>
+		<p id="test">Lorem ipsum dolor sit amet id=test.</p>
+		
+		<!-- HTML за зовнішньою декларацією CSS -->
+		<h3 id="title">My title.</h3>
+		<p class="mytext">Lorem ipsum dolor sit amet
+			class=mytext.<br> Lorem ipsum dolor sit amet.</p>
+		<p class="mytext">Lorem ipsum dolor sit amet some 
+			views<br> read code or papers.</p>
+
+		<h2>Lorem ipsum</h2>
+		
+	</body>
+</html>
+

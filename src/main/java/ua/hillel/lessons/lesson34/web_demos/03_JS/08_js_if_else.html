@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>JS | If Else</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<!--
+			JavaScript дозволяє писати код, який виконує 
+            різні дії на основі результатів логічних або 
+            порівняльних умов під час виконання.
+		-->
+		
+        <!-- Формуємо HTML елементи -->
+        <p>(1) Result is <span id="result-1"></span></p>
+        <p>(2) Result is <span id="result-2"></span></p>
+        <p>(3) Result is <span id="result-3"></span></p>
+        <p>(4) Result is <span id="result-4"></span></p>
+
+		<script>
+			// Визначаємо значення змінних            
+            let a = 5;
+            let b = 7;
+            let c = 9;
+            let d = 12;
+
+            // Виводимо текст в HTML елемент при певній(их) умовах
+
+            if(a == 5) {
+                document.getElementById("result-1").innerHTML = "abc 11";
+            }
+
+            if(b > 5) {
+                document.getElementById("result-2").innerHTML = "abc 21";
+            } else {
+                document.getElementById("result-2").innerHTML = "abc 22";
+            }
+
+            if(c < 7) {
+                document.getElementById("result-3").innerHTML = "abc 31";
+            } else if(c == 7) {
+                document.getElementById("result-3").innerHTML = "abc 32";
+            } else {
+                document.getElementById("result-3").innerHTML = "abc 33";
+            }
+
+            // Тернарний оператор
+            let result4 = d < 15 ? 'abc 41' : 'abc 42';
+            document.getElementById("result-4").innerHTML = result4;
+
+		</script>
+	</body>
+</html>

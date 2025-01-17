@@ -1,0 +1,444 @@
+
+/*------- Колір (color) ------------*/
+/*
+	Властивість color визначає колір тексту (загалом колір 
+	переднього плану) елемента.
+	Кольори в CSS найчастіше вказуються в таких форматах:
+	- ключове слово color як властивість зі значеннями: red, green, 
+	  blue тощо.
+	- HEX значення, наприклад, #ff0000, #00ff00 тощо.
+	- RGB (red-green-blue) значення, наприклад, rgb(255, 0, 0), 
+	  rgb(255, 0, 0) тощо.
+	
+	РЕСУРСИ:
+	https://www.w3.org/wiki/CSS/Properties/color/keywords
+	https://www.color-hex.com/
+*/
+
+#element {
+	color: blueviolet;
+}
+
+.content {
+	color: coral;
+}
+
+#title-el {
+	color: #766FAF;
+}
+
+#title-el-2 {
+	color: rgb(44, 176, 73);
+}
+
+/*------- Фон (background) ------------*/
+
+/*
+	Властивість background-color використовується 
+	для встановлення кольору фону елемента.
+	Значення кольорів в CSS найчастіше вказуються в таких форматах:
+	- назва кольору, наприклад, yellow тощо.
+	- HEX значення, наприклад, #FFFF00 тощо.
+	- значення RGB, наприклад, rgb(255, 255, 0) тощо.
+*/
+.cat2 {
+	font-size: 32px;
+	color: blue;
+	background-color: yellow;
+}
+
+/* .cat2 {
+	font-size: 32px;
+	color: blue;
+	background-color: #FFFF00;
+} */
+
+/* .cat2 {
+	font-size: 32px;
+	color: blue;
+	background-color: rgb(255, 255, 0);
+} */
+
+/*
+	Властивість background-image встановлює зображення 
+	як фон HTML елемента. ОДНАК, не завжди спрацьовує через 
+	зовнішній CSS файл.
+	Властивість background-repeat дозволяє контролювати, 
+	як фонове зображення повторюється або розміщується 
+	на фоні елемента. Можна налаштувати фонове зображення, 
+	яке повторюється вертикально (вісь y), горизонтально (вісь x), 
+	в обох напрямках або в жодному з них.
+*/
+.cat3 {
+	font-size: 24px;
+	color: white;
+  /*  background-image: url(images/cat.jpg); */
+	background-repeat: repeat-x;
+}
+
+/*------- Шрифт (font) ------------*/
+
+/*
+	CSS надає кілька властивостей для стилізації шрифту тексту, 
+	включаючи зміну їх вигляду, контроль їх розміру та жирності, 
+	керування варіантами тощо.
+	Властивості шрифту: font-family, font-style, font-weight, 
+	font-size та font-variant.
+
+	Властивість font-family використовується для визначення шрифту, 
+	який використовуватиметься для відтворення тексту.
+	Шрифти із засічками (serif) мають дрібні лінії або штрихи 
+	на кінцях символів, тоді як шрифти без засічок (sans-serif) 
+	більш прямі й не мають цих дрібних засічок.
+	https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
+
+	Властивість font-style використовується для встановлення стилю 
+	шрифту для текстового вмісту елемента.
+	https://developer.mozilla.org/en-US/docs/Web/CSS/font-style
+
+	Властивість font-weight визначає щільність або жирність шрифту.
+	https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight
+	
+	Властивість font-size використовується для встановлення розміру 
+	шрифту для текстового вмісту елемента.
+	https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
+
+	Властивість font-variant дозволяє відображати текст у спеціальному 
+	варіанті малих літер.
+	Малі великі (small-caps, маленькі великі літери, small capital letters) 
+	дещо відрізняються від звичайних великих літер, у яких малі літери 
+	виглядають як менші версії відповідних великих літер.
+	https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant
+	
+*/
+
+h3#my-header-font {
+	font-family: Helvetica, sans-serif;
+	font-size: 48px;
+	font-weight: bold;
+	color: blue;
+}
+
+.my-font {
+	font-size: 24px;
+	font-style: italic;
+	color: green;
+}
+
+.my-font-2 {
+	font-family: Times, serif;
+	font-size: 24px;
+	color: red;
+	background-color: rgb(223, 223, 221);
+}
+
+.my-font-3 {
+	font-family: Verdana;
+	font-size: 32px;
+}
+
+.my-font-4 {
+	font-size: 32px;
+	font-variant: small-caps;
+}
+
+#cat1 {
+	font-family: Verdana;
+	font-size: 48px;
+	color: rgb(255, 128, 0);
+}
+
+/*------- Текст (text) ------------*/
+
+/*
+	CSS надає кілька властивостей, які дозволяють визначати різні 
+	стилі тексту, такі як колір, вирівнювання, оформлення тощо.
+
+	РЕСУРСИ:
+	https://developer.mozilla.org/en-US/docs/Web/CSS/text-align
+	https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration
+	https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform
+
+*/
+
+/* 
+	Колір тексту визначається властивістю color. 
+	Див. приклад 'Колір (color)'. 
+*/
+
+/* 
+	Властивість text-align використовується для встановлення 
+	горизонтального вирівнювання тексту.
+	Текст можна вирівняти способами: ліворуч, праворуч, 
+	по центру або по ширині. 
+*/
+
+/* Вирівнювання по центру */
+h3#my-header-text {
+	font-size: 48px;
+	text-align: center;
+}
+
+/* Вирівнювання по ширині */
+.my-text {
+	font-size: 24px;
+	text-align: justify;
+}
+
+/* Вирівнювання ліворуч */
+.my-text-2 {
+	font-size: 24px;
+	text-align: left;
+}
+
+/* Вирівнювання праворуч */
+.my-text-3 {
+	font-size: 24px;
+	text-align: right;
+}
+
+/* 
+	Властивість text-decoration використовується для встановлення 
+	або видалення оформлення (декорацій) тексту. 
+*/
+
+.my-text-4 {
+	font-size: 24px;
+    text-decoration: overline;
+}
+
+.my-text-5 {
+	font-size: 24px;
+    text-decoration: line-through;
+}
+
+/* Слід уникати підкреслення тексту, який не є посиланням, 
+оскільки це може заплутати користувача. */
+.my-text-6 {
+	font-size: 24px;
+    text-decoration: underline;
+}
+
+/* Прибирання підкреслення. Наприклад, у посиланні, що оформлюється 
+тегом <a>, де, за замовчуванням, текст пікреслюється. */
+.my-text-7 {
+	font-size: 24px;
+    text-decoration: none;
+}
+
+/*
+	Властивість text-transform використовується для встановлення 
+	регістру для тексту.
+*/
+.my-text-8 {
+	font-size: 24px;
+    text-transform: uppercase;
+}
+
+.my-text-9 {
+	font-size: 24px;
+    text-transform: capitalize;
+}
+
+.my-text-10 {
+	font-size: 24px;
+    text-transform: lowercase;
+}
+
+/*----- Посилання (links) --------*/
+
+/*
+	Посилання має чотири різні стани — посилання, відвідане, активне 
+	та наведення. Ці чотири стани посилання можна стилізувати по-різному 
+	за допомогою селекторів псевдокласів прив’язки:
+	- a:link — стилі для звичайних або невідвіданих посилань.
+	- a:visited — стилі для посилань, які користувач уже відвідав.
+	- a:hover — стилі для посилання, коли користувач наводить 
+	  на нього курсор миші.
+	- a:active — стилі для посилань, коли їх натискають.
+
+	РЕСУРСИ:
+	https://developer.mozilla.org/en-US/docs/Web/CSS/:link
+	https://developer.mozilla.org/en-US/docs/Web/CSS/:visited
+	https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
+	https://developer.mozilla.org/en-US/docs/Web/CSS/:active
+	
+*/
+
+/* Посилання без підкреслення */
+a#my-link-1:link {
+	text-decoration: none;
+	color: green;
+}
+
+/* Посилання відвідане */
+a#my-link-2:visited {
+	text-decoration: none;
+	color: green;
+}
+
+/* Посилання з наведенням */
+a#my-link-3:hover {
+	text-decoration: underline;
+	color: red;
+	font-size: 24px;
+}
+/* Посилання активне */
+a#my-link-4:active {
+	text-decoration: none;
+	color: red;
+	font-size: 24px;
+}
+
+/*----- Списки (Lists) --------*/
+
+/*
+	CSS надає кілька властивостей для стилізації та форматування списків.
+
+	РЕСУРСИ:
+	https://developer.mozilla.org/en-US/docs/Web/CSS/list-style
+
+*/
+
+ul.my-list-1 {
+	list-style-type: square;
+}
+
+ol.my-list-2 {
+	list-style-type: upper-roman;
+}
+
+
+/*------- Таблиці (tables) ------------*/
+
+/*
+	CSS надає кілька властивостей, які дозволяють формувати макет 
+	та представлення елементів таблиці.	Наприклад.
+
+	Властивість CSS border — спосіб визначити межі для таблиць.
+	https://developer.mozilla.org/en-US/docs/Web/CSS/border
+	Складові властивості border
+	https://developer.mozilla.org/en-US/docs/Web/CSS/border#constituent_properties
+
+	Властивість CSS border-collapse визначає, чи мають клітинки 
+	всередині <table> спільні чи окремі межі.
+	https://developer.mozilla.org/en-US/docs/Web/CSS/border-collapse
+
+	Властивість CSS padding встановлює область заповнення на всіх чотирьох 
+	сторонах навколо контенту елемента одночасно.
+	https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+
+	Властивість CSS width встановлює ширину елемента.
+	https://developer.mozilla.org/en-US/docs/Web/CSS/width
+	
+	Властивість CSS height визначає висоту елемента.
+	https://developer.mozilla.org/en-US/docs/Web/CSS/height
+
+	Властивість CSS text-align встановлює горизонтальне вирівнювання 
+	вмісту вбудованого рівня всередині елемента блоку або поля клітинки 
+	таблиці.
+	https://developer.mozilla.org/en-US/docs/Web/CSS/text-align
+
+*/
+
+/*
+	Групування селекторів.	
+	Кілька CSS селекторів можуть спільно використовувати 
+	оголошення правил стилю. Можна згрупувати їх у список, 
+	розділений комами, щоб мінімізувати CSS код.
+	Тут встановлюються стилі для елементів <table>, <th> та <td>.
+*/
+table, th, td {
+	border-style: solid;
+	border-width: 1px;
+	border-collapse: collapse;
+	padding: 2px;
+}
+
+caption {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+th {
+	height: 28px;
+	background-color: #6c47eb;
+	color: white;
+	border-color: black;
+}
+
+.tbl-stl {
+	width: 400px;
+    height: 40px;
+	text-align: center;
+}
+
+/*
+	Встановлення різних кольорів фону для різних рядків таблиці, 
+	відоме як «зебра», можна досягти, використовуючи CSS селектор 
+	псевдокласу  :nth-child().
+	https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child
+*/
+
+tbody tr:nth-child(odd) {
+    background-color: #e4e4e4;
+}
+
+
+/*----- Box model (Блочна модель) --------*/
+
+/*
+	Кожен елемент, який можна відобразити на Web-сторінці, складається 
+	з одного або кількох прямокутних блоків. 
+	CSS box model зазвичає та описує як ці прямокутні поля розташовані
+	на Web-сторінці. 
+	Ці блоки можуть мати різні властивості та можуть взаємодіяти один 
+	з одним по-різному, але кожен блок має область вмісту (content area) 
+	та оточуючі області відступу (padding), межі (border), поля (margin).
+	https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
+	
+	02_CSS\images\css_box_model.png
+	
+	Властивості padding дозволяють встановити відстань між вмістом елемента 
+	та його межею (border).
+	https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+
+	Властивості border дозволяють визначити межу рамки елемента.
+	https://developer.mozilla.org/en-US/docs/Web/CSS/border
+
+	Властивості margin дозволяють встановити відстань навколо межі 
+	рамки елемента
+	https://developer.mozilla.org/en-US/docs/Web/CSS/margin
+
+*/
+
+.box-stl-1 {
+	width: 300px;
+	border-style: solid;
+	border-color: red;
+	padding: 20px;
+}
+
+.box-stl-2 {
+	border-style: dashed;
+	border-color: green;
+	padding: 20px;
+	margin: 55px;
+}
+
+.box-stl-3 {
+	width: 450px;
+	border-style: dotted;
+	border-color: blue;
+	font-size: 24px;
+}
+
+.box-stl-4 {
+	width: 500px;
+	border-style: solid;
+	border-color: rgb(0, 255, 132);
+	border-width: 16px;
+}
+
+	
+	

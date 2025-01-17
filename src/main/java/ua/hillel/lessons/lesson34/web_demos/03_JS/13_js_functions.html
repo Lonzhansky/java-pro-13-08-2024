@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS | Functions</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <!--
+      Функція — це група операторів, які виконують певні завдання 
+      та можуть зберігатися та підтримуватися окремо від основної 
+      програми.  
+      Наприклад, події клікання викликають відповідні функції, 
+      що виконують певні завдання.
+    -->
+    <button type="button" onclick="getAppInfo()">Show App Info</button>
+    <p>(1) Result is <span id="result-1"></span></p>
+    <button type="button" onclick="calcSum(3, 12)">Calc sum</button>
+    <p>(2) Result is <span id="result-2"></span></p>
+    <button type="button" onclick="getUserName()">Get User name 1</button>
+    <!-- Надано параметр функції -->
+    <button type="button" onclick="getUserName('Alice')">Get User name 2</button>
+    <p>(3) <span id="result-3"></span></p>
+
+    <script>
+      function getAppInfo() {
+        let appInfo = "My Super JS App";
+        document.getElementById("result-1").innerHTML = "'" + appInfo + "'";
+      }		 
+
+      function calcSum(num1, num2) {
+        let sumRes1 = num1 + num2;
+        document.getElementById("result-2").innerHTML = sumRes1
+      }
+
+      // З ES6 можна вказати значення за замовчуванням для параметрів 
+      // функції. Якщо для функції не надано жодних аргументів під час 
+      // її виклику, використовуватимуться ці значення параметрів за 
+      // замовчуванням.
+      function getUserName(name = 'Tom') {
+        document.getElementById("result-3").innerHTML = "Name is " + name;
+      }
+
+    </script>
+  </body>
+</html>

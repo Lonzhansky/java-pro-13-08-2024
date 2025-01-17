@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS | Output In HTML Element</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<!--
+			Можна написати або вставити вихідні дані в HTML елемент 
+			за допомогою властивості innerHTML елемента. 
+			Однак перед написанням виводу спочатку потрібно вибрати 
+			елемент за допомогою JS методу getElementById().
+		-->
+		<h2 id="my-title"></h2>
+		<p style="font-size: 24px;">Result is 
+			<span id="my-result" style="color: blue;"></span>
+		</p>
+
+		<script>
+			// Виводимо текст в HTML елемент
+			document.getElementById("my-title").innerHTML = "My App!";
+
+			// Робимо розрахунки та результат виводимо 
+			// в HTML елемент.
+			let x = 5;
+			let y = 10;
+			let sum = x + y;
+			document.getElementById("my-result").innerHTML = sum;
+		</script>
+	</body>
+</html>

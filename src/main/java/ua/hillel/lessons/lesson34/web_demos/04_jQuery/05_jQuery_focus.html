@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery | Focus Event</title>		
+		<meta charset="utf-8">
+		<!-- Підтягуємо jQuery звідси 
+			https://jquery.com/download/#jquery-cdn -->
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<style>
+			label{
+				display: block;
+				margin: 5px 0;
+			}
+			label span{
+				display: none;
+			}
+		</style>
+		<script>
+			$(function(){
+				$("input").focus(function(){
+					$(this).next("span").show().fadeOut("slow");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<form>
+			<label>Email: <input type="text"> <span>focus fire</span></label>
+			<label>Password: <input type="password"> <span>focus fire</span></label>
+			<label><input type="submit" value="Sign In"> <span>focus fire</span></label>
+		</form>
+	</body>
+</html>

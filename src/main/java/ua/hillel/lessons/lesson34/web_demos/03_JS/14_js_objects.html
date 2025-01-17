@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS | Objects</title>		
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<!--
+			JavaScript — об’єктна мова, і в JavaScript майже все 
+			є об’єктом або діє як об’єкт.
+		-->
+
+		<button type="button" onclick="getUserInfo()">User Info</button>
+		<p>(1) Data: <span id="data-1"></span></p>
+		<button type="button" onclick="getEmployeeInfo()">Employee Info</button>
+		<p>(2) Data: <span id="data-2"></span></p>
+
+		<script>
+			// Об’єкт можна створити за допомогою фігурних дужок {} 
+			// із певним списком властивостей. 
+			// Властивість – пара «ключ: значення», де ключ (або 
+			// назва властивості) завжди є рядком, а значення (або 
+			// значення властивості) може бути будь-яким типом даних, 
+			// рядки, числа тощо.
+
+			// JS об'єкт
+			let user = {
+				firstName: "Tom",
+				lastName: "Clark",
+				email: "tom@mail.com",
+				age: 27
+			};
+
+			// Dot notation			
+			function getUserInfo() {
+				document.getElementById("data-1").innerHTML = 
+					user.firstName + " " + user.lastName + 
+					", email: " + user.email + 
+					", age " + user.age;
+			}
+			
+			// JS об'єкт
+			let employee = {
+				"first name": "Alice",
+				"last name": "Moon",
+				"phone": "555 231-8596",
+				"position": "accountant"
+			};
+			
+			// Bracket notation
+			function getEmployeeInfo() {
+				document.getElementById("data-2").innerHTML = 
+					employee["first name"] + " " + employee["last name"] + 
+					", phone: " + employee["phone"] + 
+					", position: " + employee["position"];
+			}
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,118 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    /*
+        Властивість CSS align-items встановлює значення
+        align-self для всіх прямих дочірніх елементів
+        як групи. У flexbox він керує вирівнюванням елементів
+        на поперечній осі. У макеті сітки він контролює
+        вирівнювання елементів на осі блоку в межах їхніх
+        областей сітки.
+        https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
+    */
+    align-items: center;
+    /*
+        vh означає viewport height (висота вікна перегляду),
+        тобто висота видимого екрана. 100vh представлятиме
+        100% висоти вікна перегляду або повну висоту екрана.
+    */
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #8c8c8c;
+    padding: 20px;
+    /*
+        Властивість CSS border-radius заокруглює кути зовнішньої
+        межі елемента.
+        https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+    */
+    border-radius: 10px;
+    width: 320px;
+}
+
+.display {
+    background-color: #e9e7e7;
+    color: rgb(26, 24, 24);
+    font-size: 36px;
+    padding: 10px;
+    text-align: right;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    /*
+        Властивість CSS display встановлює, чи розглядатиметься
+        елемент як блок або вбудований блок, а також макет, який
+        використовується для його дочірніх елементів.
+        https://developer.mozilla.org/en-US/docs/Web/CSS/display
+    */
+    display: grid;
+    /*
+        Властивість CSS grid-template-columns визначає
+        назви ліній і функції розміру доріжок стовпців сітки.
+        https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns
+    */
+    grid-template-columns: repeat(4, 1fr);
+    /*
+        Властивість CSS gap встановлює проміжки (також звані жолобами)
+        між рядками та стовпцями.
+        https://developer.mozilla.org/en-US/docs/Web/CSS/gap
+    */
+    gap: 10px;
+}
+
+.btn {
+    background-color: white;
+    color: rgb(26, 24, 24);;
+    font-size: 24px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    /*
+        Властивість CSS cursor встановлює курсор миші,
+        якщо такий є, щоб показувати, коли вказівник миші
+        знаходиться над елементом.
+        https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+    */
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: green;
+}
+
+.zero {
+    /*
+        Властивість CSS grid-column визначає розмір
+        і розташування елемента сітки в стовпці сітки,
+        додаючи лінію, проміжок або нічого (автоматично)
+        до його розміщення сітки, таким чином вказуючи
+        вбудований початок і вбудований кінець її області
+        сітки.
+        https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column
+    */
+    grid-column: span 2;
+}
+
+.equals {
+    /*
+        Властивість CSS grid-row визначає розмір і розташування
+        елемента сітки в рядку сітки, додаючи лінію, проміжок
+        або нічого (автоматично) до його розміщення сітки, таким
+        чином вказуючи вбудований початок і вбудований кінець її області
+        сітки.
+        https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row
+    */
+    grid-row: span 2;
+    background-color: #f1c40f;
+}
+
+.equals:hover {
+    background-color: #feeeab;
+}
+

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>04_HTTP_Methods</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<section id="методи-http." class="level2">
+<h2>Методи HTTP.</h2>
+<hr />
+<p><strong>Методи HTTP визначають тип дії</strong>, яку клієнт хоче виконати над ресурсом на сервері.</p>
+<p><strong>GET</strong> - запит на отримання ресурсу. Клієнт використовує цей метод для отримання інформації від сервера.</p>
+<p>Наприклад, хочемо отримати інформацію про певного користувача. На сервері є ресурс <strong><code>/users</code></strong> , який відповідає за інформацію про користувачів.</p>
+<pre><code>    GET /users?id=123 HTTP/1.1
+    Host: example.com</code></pre>
+<ul>
+<li><strong><code>GET</code></strong> - HTTP метод, який вказує, що ми хочемо отримати інформацію.</li>
+<li><strong><code>/users</code></strong> - шлях (URI) до ресурсу, який запитуємо.</li>
+<li><strong><code>id=123</code></strong> - це параметр запиту, який вказує на конкретного користувача з ідентифікатором 123.</li>
+<li><strong><code>Host: example.com</code></strong> - заголовок, який вказує на домен сервера, до якого робимо запит.</li>
+</ul>
+<p>Відповідь сервера:</p>
+<pre><code>    HTTP/1.1 200 OK
+    Content-Type: application/json
+    
+    {
+      &quot;id&quot;: 123,
+      &quot;name&quot;: &quot;Alice&quot;,
+      &quot;email&quot;: &quot;alice@mail.com&quot;
+    }</code></pre>
+<ul>
+<li><strong><code>HTTP/1.1 200 OK</code></strong> - статус-код відповіді, що означає успішний запит.</li>
+<li><strong><code>Content-Type: application/json</code></strong> - заголовок, що вказує на те, що тіло відповіді має формат JSON.</li>
+</ul>
+<p>Тіло відповіді містить інформацію про користувача з ідентифікатором <code>123</code> у форматі JSON, таку як ім’я та електронна пошта.</p>
+<p><strong>POST</strong> використовується для надсилання даних на сервер для обробки. Зазвичай використовується при відправці форм та при створенні нових ресурсів на сервері.</p>
+<p>Наприклад, хочемо створити нового користувача на сервері</p>
+<pre><code>    POST /users HTTP/1.1
+    Host: example.com
+    Content-Type: application/json
+    
+    {
+      &quot;name&quot;: &quot;Tom&quot;,
+      &quot;email&quot;: &quot;tom@mail.com&quot;
+    }</code></pre>
+<ul>
+<li><strong><code>POST</code></strong> - HTTP метод, який вказує, що хочемо надіслати (створити) дані на сервер.</li>
+<li><strong><code>/users</code></strong> - шлях (URI) до ресурсу, для якого виконуємо POST-запит (в цьому випадку, створюємо нового користувача).</li>
+<li><strong><code>Host: example.com</code></strong> - заголовок, який вказує на домен сервера, до якого робимо запит.</li>
+<li><strong><code>Content-Type: application/json</code></strong> - заголовок, що вказує на те, що тіло запиту має формат JSON.</li>
+</ul>
+<p>Тіло POST-запиту містить інформацію про нового користувача у форматі JSON з ім’ям <code>Tom</code> та електронною поштою <code>tom@mail.com</code>.</p>
+<p>Відповідь сервера:</p>
+<pre><code>    HTTP/1.1 201 Created
+    Location: /users/124
+    Content-Type: application/json
+    
+    {
+      &quot;id&quot;: 124,
+      &quot;name&quot;: &quot;Tom&quot;,
+      &quot;email&quot;: &quot;tom@mail.com&quot;
+    }</code></pre>
+<ul>
+<li><strong><code>HTTP/1.1 201 Created</code></strong> - статус-код відповіді, що позначає успішне створення ресурсу.</li>
+<li><strong><code>Location: /users/124</code></strong> - заголовок, який вказує на шлях до нового ресурсу, який було створено (у цьому випадку, користувача з ідентифікатором <code>124</code>).</li>
+<li><strong><code>Content-Type: application/json</code></strong> - заголовок, що вказує на те, що тіло відповіді має формат JSON.</li>
+</ul>
+<p>Тіло відповіді містить інформацію про нового користувача з ідентифікатором <code>124</code> у форматі JSON.</p>
+<p><strong>PUT</strong> зазвичай використовується для оновлення існуючого ресурсу або створення нового, якщо він не існує. Він вимагає від клієнта вказати ресурс, який він хоче зберегти або оновити.</p>
+<p>Наприклад, хочемо оновити існуючого користувача на веб-сервері</p>
+<pre><code>    PUT /users/124 HTTP/1.1
+    Host: example.com
+    Content-Type: application/json
+    
+    {
+      &quot;name&quot;: &quot;Tomas&quot;,
+      &quot;email&quot;: &quot;tomas@mail.com&quot;
+    }</code></pre>
+<ul>
+<li><strong><code>PUT</code></strong> - HTTP метод, який вказує, що хочемо виконати оновлення даних на сервері.</li>
+<li><strong><code>/users/124</code></strong> - шлях (URI) до ресурсу, який оновлюємо (у цьому випадку, користувача з ідентифікатором <code>124</code>).</li>
+<li><strong><code>Host: example.com</code></strong> - заголовок, який вказує на домен сервера, до якого робимо запит.</li>
+<li><strong><code>Content-Type: application/json</code></strong> - заголовок, що вказує на те, що тіло запиту має формат JSON.</li>
+</ul>
+<p>Тіло PUT-запиту містить оновлену інформацію про користувача з новим ім’ям <code>Tomas</code> та новою електронною поштою <code>tomas@mail.com</code>.</p>
+<p>Відповідь сервера</p>
+<pre><code>    HTTP/1.1 200 OK
+    Content-Type: application/json
+    
+    {
+      &quot;id&quot;: 124,
+      &quot;name&quot;: &quot;Tomas&quot;,
+      &quot;email&quot;: &quot;tomas@mail.com&quot;
+    }</code></pre>
+<ul>
+<li><strong><code>HTTP/1.1 200 OK</code></strong> - статус-код відповіді, що позначає успішне виконання запиту.</li>
+<li><strong><code>Content-Type: application/json</code></strong> - заголовок, що вказує на те, що тіло відповіді має формат JSON.</li>
+</ul>
+<p>Тіло відповіді містить оновлену інформацію про користувача з ідентифікатором <code>124</code> у форматі JSON.</p>
+<p><strong>DELETE</strong> використовується для видалення ресурсу на сервері. Клієнт за допомогою цього методу може попросити сервер видалити певний ресурс.</p>
+<p>Наприклад, хочемо видалити користувача з веб-сервера.</p>
+<pre><code>    DELETE /users/124 HTTP/1.1
+    Host: example.com</code></pre>
+<ul>
+<li><strong><code>DELETE</code></strong> - HTTP метод, який вказує, що хочемо видалити ресурс на сервері.</li>
+<li><strong><code>/users/124</code></strong> - шлях (URI) до ресурсу, який хочемо видалити (у цьому випадку, користувача з ідентифікатором <code>124</code>).</li>
+<li><strong><code>Host: example.com</code></strong> - заголовок, який вказує на домен сервера, до якого робимо запит.</li>
+</ul>
+<p>У цьому прикладі намагаємося видалити користувача з ідентифікатором <code>124</code>.</p>
+<p>Відповідь сервера:</p>
+<pre><code>    HTTP/1.1 204 No Content</code></pre>
+<ul>
+<li><strong><code>HTTP/1.1 204 No Content</code></strong> - статус-код відповіді, що позначає успішне видалення ресурсу без повернення тіла відповіді.</li>
+</ul>
+<p>У відповіді відсутнє тіло, оскільки DELETE-запит просто видаляє ресурс, і немає необхідності повертати додаткову інформацію.</p>
+<p><strong>PATCH</strong> використовується для часткового оновлення ресурсу. Клієнт надсилає тільки ті дані, які потрібно оновити, замість повного представлення ресурсу.</p>
+<p>Наприклад, хочемо оновити лише певну частину інформації про користувача на веб-сервері, а не весь ресурс.</p>
+<pre><code>    PATCH /users/124 HTTP/1.1
+    Host: example.com
+    Content-Type: application/json
+    
+    {
+      &quot;email&quot;: &quot;bigtom@mail.com&quot;
+    }</code></pre>
+<ul>
+<li><strong><code>PATCH</code></strong> - HTTP метод, який вказує, що хочемо виконати часткове оновлення ресурсу.</li>
+<li><strong><code>/users/124</code></strong> - шлях (URI) до ресурсу, який хочемо оновити (у цьому випадку, користувача з ідентифікатором <code>124</code>).</li>
+<li><strong><code>Host: example.com</code></strong> - заголовок, який вказує на домен сервера, до якого робимо запит.</li>
+<li><strong><code>Content-Type: application/json</code></strong> - заголовок, що вказує на те, що тіло запиту має формат JSON.</li>
+</ul>
+<p>Тіло PATCH-запиту містить тільки ту інформацію, яку хочемо оновити. У цьому випадку, змінюємо електронну пошту користувача на <code>bigtom@mail.com</code>.</p>
+<p>Відповідь сервера:</p>
+<pre><code>    HTTP/1.1 200 OK
+    Content-Type: application/json
+    
+    {
+      &quot;id&quot;: 124,
+      &quot;name&quot;: &quot;Tomas&quot;,
+      &quot;email&quot;: &quot;bigtom@mail.com&quot;
+    }</code></pre>
+<ul>
+<li><strong><code>HTTP/1.1 200 OK</code></strong> - статус-код відповіді, що позначає успішне виконання запиту.</li>
+<li><strong><code>Content-Type: application/json</code></strong> - заголовок, що вказує на те, що тіло відповіді має формат JSON.</li>
+</ul>
+<p>Тіло відповіді містить оновлену інформацію про користувача з ідентифікатором <code>124</code> у форматі JSON. У цьому випадку, електронна пошта була змінена, а ім’я залишилося незмінним.</p>
+<p><strong>HEAD</strong> аналогічний методу GET, але сервер повертає тільки заголовки без тіла відповіді. Використовується для отримання метаданих без фактичного завантаження ресурсу. Це може бути корисно, наприклад, для отримання інформації про розмір файлу чи час модифікації без необхідності завантаження самого файлу.</p>
+<pre><code>    HEAD /users/124 HTTP/1.1
+    Host: example.com</code></pre>
+<ul>
+<li><strong><code>HEAD</code></strong> - HTTP метод, який вказує, що хочемо отримати тільки заголовки ресурсу.</li>
+<li><strong><code>/users/124</code></strong> - шлях (URI) до ресурсу, для якого виконуємо HEAD-запит (у цьому випадку, до користувача з ідентифікатором <code>124</code>).</li>
+<li><strong><code>Host: example.com</code></strong> - заголовок, який вказує на домен сервера, до якого робимо запит.</li>
+</ul>
+<p>У відповіді на HEAD-запит може бути повернутий, наприклад, заголовок <strong><code>Content-Length</code></strong> для розміру ресурсу чи <strong><code>Last-Modified</code></strong> для часу останньої модифікації.</p>
+<p>Приклад можливої відповіді сервера:</p>
+<pre><code>    HTTP/1.1 200 OK
+    Content-Length: 1234
+    Content-Type: application/json
+    Last-Modified: Wed, 29 Dec 2023 12:00:00 GMT</code></pre>
+<ul>
+<li><strong><code>HTTP/1.1 200 OK</code></strong> - статус-код відповіді, що позначає успішне виконання HEAD-запиту.</li>
+<li><strong><code>Content-Length: 1234</code></strong> - заголовок, який показує розмір тіла ресурсу.</li>
+<li><strong><code>Content-Type: application/json</code></strong> - заголовок, який вказує на тип контенту ресурсу.</li>
+<li><strong><code>Last-Modified: Wed, 29 Dec 2023 12:00:00 GMT</code></strong> - заголовок, який вказує на час останньої модифікації ресурсу.</li>
+</ul>
+<p><strong>OPTIONS</strong> використовується для отримання інформації про можливості сервера або параметри з’єднання для конкретного ресурсу.</p>
+<pre><code>    OPTIONS /users/124 HTTP/1.1
+    Host: example.com</code></pre>
+<ul>
+<li><strong><code>OPTIONS</code></strong> - HTTP метод, який вказує, що хочемо отримати інформацію про можливості сервера для ресурсу.</li>
+<li><strong><code>/users/124</code></strong> - це шлях (URI) до ресурсу, для якого виконуємо OPTIONS-запит (у цьому випадку, до користувача з ідентифікатором <code>124</code>).</li>
+<li><strong><code>Host: example.com</code></strong> - заголовок, який вказує на домен сервера, до якого робимо запит.</li>
+</ul>
+<p>Приклад можливої відповіді сервера:</p>
+<pre><code>    HTTP/1.1 200 OK
+    Allow: GET, HEAD, OPTIONS
+    Content-Length: 0</code></pre>
+<ul>
+<li><strong><code>HTTP/1.1 200 OK</code></strong> - статус-код відповіді, що позначає успішне виконання OPTIONS-запиту.</li>
+<li><strong><code>Allow: GET, HEAD, OPTIONS</code></strong> - заголовок, який вказує на список дозволених методів для ресурсу.</li>
+<li><strong><code>Content-Length: 0</code></strong> - заголовок, який вказує на розмір тіла відповіді (у цьому випадку, тіло відсутнє).</li>
+</ul>
+<p><strong>Коди статусів відповіді сервера:</strong></p>
+<ul>
+<li>Інформаційні (1хх) - коди, що інформують про процес передачі.</li>
+<li>Успіх (2хх) - запит був повністю отриманий, зрозумілий і прийнятий до обробки.</li>
+<li>Перенаправлення (3хх) — клієнту слід вжити подальших дій для успішного виконання запиту.</li>
+<li>Помилка клієнта (4хх) – запит, що містить неправильні синтаксичні конструкції, не може бути успішно виконаний.</li>
+<li>Помилка сервера (5хх) — сервер не зміг відповісти на коректно поставлений запит. Сервер або знає, що він припустився помилки, або не здатний обробити запит.</li>
+</ul>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP response status codes.</a></p>
+<p>HTTP методи дозволяють клієнтам та серверам взаємодіяти між собою, використовуючи різні операції для роботи з ресурсами на сервері.</p>
+</section>
+</body>
+</html>
